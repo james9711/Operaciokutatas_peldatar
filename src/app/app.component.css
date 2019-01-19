@@ -18,3 +18,17 @@
     height: 100%;
     background-color: antiquewhite;
   }
+
+  .menu button{
+    width: 100%;
+    height: 10%;
+    border: none;
+    text-align: left;
+    border-radius: 0;
+  }
+
+  .menu h5{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
