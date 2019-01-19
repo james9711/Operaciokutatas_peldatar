@@ -1,7 +1,19 @@
-.example-icon {
-    padding: 0 14px;
-}
-
-.example-spacer {
-    flex: 1 1 auto;
-}  
+.split {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+  }
+  
+  .left {
+    left: 0;
+    width: 10%;
+    height: 100%;
+  }
+  
+  .right {
+    right: 0;
+    width: 90%;
+    height: 100%;
+    background-color: bisque;
+  }
