@@ -9,11 +9,12 @@
     left: 0;
     width: 10%;
     height: 100%;
+    background-color: rgb(175, 167, 155)
   }
   
   .right {
     right: 0;
     width: 90%;
     height: 100%;
-    background-color: bisque;
+    background-color: antiquewhite;
   }
