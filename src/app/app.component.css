@@ -11,19 +11,19 @@
   
   .left {
     left: 0;
-    width: 10%;
+    width: 15%;
     height: 100%;
-    background-color: rgb(175, 167, 155)
+    background-color: rgb(175, 167, 155);
   }
   
   .right {
     right: 0;
-    width: 90%;
+    width: 85%;
     height: 100%;
     background-color: antiquewhite;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 500px) {
     .right {
       width: 100%; /* The rights width is 100%, when the viewport is 500px or smaller */
     }
@@ -35,10 +35,12 @@
     border: none;
     text-align: left;
     border-radius: 0;
+    font-size: 1vw;
   }
 
   .menu h5{
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 1.6vw;
   }
