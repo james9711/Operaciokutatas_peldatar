@@ -1,8 +1,12 @@
 .split {
-    height: 100%;
     position: fixed;
+    height: 100%;
     z-index: 1;
     overflow-x: hidden;
+  }
+
+  .top{
+    position:relative;
   }
   
   .left {
@@ -17,6 +21,12 @@
     width: 90%;
     height: 100%;
     background-color: antiquewhite;
+  }
+
+  @media screen and (max-width: 800px) {
+    .right {
+      width: 100%; /* The rights width is 100%, when the viewport is 500px or smaller */
+    }
   }
 
   .menu button{
