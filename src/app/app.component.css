@@ -22,7 +22,7 @@
     right: 0;
     width: 85%;
     height: 100%;
-    background-color: rgb(184, 172, 158);
+    background-color: rgba(184, 172, 158, 0.822);
   }
 
   @media screen and (max-width: 500px) {
@@ -38,10 +38,12 @@
     text-align: left;
     border-radius: 0;
     font-size: 1vw;
+    color: rgb(24, 24, 24);
     cursor: pointer;
   }
 
   .menu button:hover {
+    color: rgb(221, 218, 218);
     transform: scale(1.1);
     transition: transform .2s;
   }
