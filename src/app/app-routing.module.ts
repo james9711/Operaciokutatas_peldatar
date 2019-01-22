@@ -12,6 +12,7 @@ import { TartalomjegyzekComponent } from './tartalomjegyzek/tartalomjegyzek.comp
 import { PeldatarComponent } from './peldatar/peldatar.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'peldatar', pathMatch: 'full'},
   { path: 'chapter1', component: Chapter1Component },
   { path: 'chapter2', component: Chapter2Component },
   { path: 'chapter3', component: Chapter3Component },
