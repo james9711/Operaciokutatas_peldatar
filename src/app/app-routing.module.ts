@@ -9,6 +9,7 @@ import { Chapter5Component } from './chapter5/chapter5.component';
 import { Chapter6Component } from './chapter6/chapter6.component';
 import { Chapter7Component } from './chapter7/chapter7.component';
 import { TartalomjegyzekComponent } from './tartalomjegyzek/tartalomjegyzek.component';
+import { PeldatarComponent } from './peldatar/peldatar.component';
 
 const routes: Routes = [
   { path: 'chapter1', component: Chapter1Component },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'chapter5', component: Chapter5Component },
   { path: 'chapter6', component: Chapter6Component },
   { path: 'chapter7', component: Chapter7Component },
-  { path: 'tartalomjegyzek', component: TartalomjegyzekComponent }
+  { path: 'tartalomjegyzek', component: TartalomjegyzekComponent },
+  { path: 'peldatar', component: PeldatarComponent }
 ];
 
 @NgModule({

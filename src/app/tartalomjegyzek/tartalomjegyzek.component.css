@@ -13,3 +13,8 @@
   mat-divider {
     padding-top: 40px;
   }
+
+  mat-list h3:hover, mat-list-item:hover {
+    transform: scale(1.05);
+    transition: transform .5s;
+  }

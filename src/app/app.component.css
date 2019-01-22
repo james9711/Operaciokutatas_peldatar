@@ -42,14 +42,19 @@
   }
 
   .menu button:hover {
-    font-size: 1.1vw;
-    transition: 1s;
+    transform: scale(1.1);
+    transition: transform .2s;
   }
 
   .menu h5{
     text-align: center;
-    padding-top: 10px;
+    padding-top: 30px;
     padding-bottom: 10px;
     font-size: 1.6vw;
     cursor: pointer;
+  }
+
+  .menu h5:hover {
+    transform: scale(1.1);
+    transition: transform .2s;
   }
