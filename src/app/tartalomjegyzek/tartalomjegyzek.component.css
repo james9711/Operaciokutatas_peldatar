@@ -1,5 +1,5 @@
 .fejezetcim {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .paperUp {
@@ -20,5 +20,6 @@
 
   mat-list h3:hover, mat-list-item:hover {
     transform: scale(1.05);
-    transition: transform .5s;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
   }

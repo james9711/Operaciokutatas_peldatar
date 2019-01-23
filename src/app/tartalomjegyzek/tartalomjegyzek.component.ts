@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-tartalomjegyzek',
   templateUrl: './tartalomjegyzek.component.html',
-  styleUrls: ['./tartalomjegyzek.component.css']
+  styleUrls: ['./tartalomjegyzek.component.css', '../app.component.css']
 })
 export class TartalomjegyzekComponent implements OnInit {
 
