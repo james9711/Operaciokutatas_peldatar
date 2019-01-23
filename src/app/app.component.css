@@ -30,7 +30,9 @@
 }
 
 .menu button{
+  font-weight: 500;
   height: 60px;
+  opacity: 0.8;
   width: 100%;
   border: none;
   text-align: left;
@@ -50,7 +52,8 @@
   text-align: center;
   padding-top: 60px;
   padding-bottom: 10px;
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -61,7 +64,7 @@
 
 .fejezetcim {
     margin-bottom: 30px;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 }
 
 .alfejezetcim {
@@ -92,12 +95,12 @@ li{
 .paperDown {
   background: #fff;
   box-shadow:
-  /*layers + shadow*/
-    0 1px 1px rgba(0,0,0,0.15),
-    0 10px 0 -5px #eee,
-    0 10px 1px -4px rgba(0,0,0,0.15),
-    0 20px 0 -10px #eee,
-    0 20px 1px -9px rgba(0,0,0,0.15);
+    /*layers + shadow*/
+    0 -1px 1px rgba(0,0,0,0.15),
+    0 -10px 0 -5px #eee,
+    0 -10px 1px -4px rgba(0,0,0,0.15),
+    0 -20px 0 -10px #eee,
+    0 -20px 1px -9px rgba(0,0,0,0.15);
     padding: 3%;
     cursor: pointer;
     margin-bottom: 30px;
