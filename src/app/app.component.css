@@ -28,6 +28,10 @@
   }
 }
 
+.text-muted {
+  font-family: 'Inconsolata', monospace;
+}
+
 .menu button{
   font-weight: 500;
   height: 60px;
@@ -59,6 +63,15 @@
 .menu h5:hover {
   transform: scale(1.1);
   transition: transform .2s;
+}
+
+.designedBy {
+  font-family: 'Inconsolata', monospace;
+  position: absolute;
+  left: 2vh;
+  bottom: 10vh;
+  color: rgba(211, 208, 208, 0.884);
+  font-size: 14px;
 }
 
 .fejezetcim {
