@@ -2,24 +2,13 @@
   margin-bottom: 50px;
 }
 
-.paperUp {
-  background: #fff;
-  box-shadow:
-    /*layers + shadow*/
-    0 -1px 1px rgba(0,0,0,0.15),
-    0 -10px 0 -5px #eee,
-    0 -10px 1px -4px rgba(0,0,0,0.15),
-    0 -20px 0 -10px #eee,
-    0 -20px 1px -9px rgba(0,0,0,0.15);
-    padding: 5%;
-}
-
   mat-divider {
     padding-top: 40px;
   }
 
-  mat-list h3:hover, mat-list-item:hover {
-    transform: scale(1.05);
+mat-list h4:hover, mat-list-item:hover {
+    font-weight: bold;
+    transform: scale(1.04);
     transition: all .5s ease-in-out;
     cursor: pointer;
   }
