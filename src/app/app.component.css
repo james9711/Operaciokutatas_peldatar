@@ -16,6 +16,7 @@
 }
 
 .left {
+  padding: 10px;
   left: 0;
   width: 15%;
   background-color: rgb(136, 129, 118);
@@ -23,7 +24,7 @@
 }
 
 .right {
-  padding: 50px;
+  padding: 70px;
   right: 0;
   width: 85%;
   background-color: rgba(184, 172, 158, 0.822);
@@ -45,7 +46,7 @@
 
 .menu button{
   font-weight: 500;
-  height: 65px;
+  height: 60px;
   opacity: 0.8;
   width: 100%;
   border: none;
@@ -79,8 +80,8 @@
 .designedBy {
   font-family: 'Inconsolata', monospace;
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  left: 20px;
+  bottom: 20px;
   color: rgba(211, 208, 208, 0.884);
   font-size: 14px;
 }
@@ -117,10 +118,6 @@ li{
 }
 
 .paperUp {
-  width: 90%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   background: #fff;
   box-shadow:
     /*layers + shadow*/
@@ -129,21 +126,6 @@ li{
     0 -10px 1px -4px rgba(0,0,0,0.15),
     0 -20px 0 -10px #eee,
     0 -20px 1px -9px rgba(0,0,0,0.15);
-    padding: 3%;
-    cursor: pointer;
-    margin-bottom: 30px;
-}
-
-.paperUp {
-  background: #fff;
-  box-shadow:
-    /*layers + shadow*/
-    0 -1px 1px rgba(0,0,0,0.15),
-    0 -10px 0 -5px #eee,
-    0 -10px 1px -4px rgba(0,0,0,0.15),
-    0 -20px 0 -10px #eee,
-    0 -20px 1px -9px rgba(0,0,0,0.15);
-    padding: 5%;
     padding: 3%;
     cursor: pointer;
 }

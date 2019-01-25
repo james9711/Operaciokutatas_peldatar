@@ -1,14 +1,10 @@
-.fejezetcim {
-  margin-bottom: 50px;
+mat-divider {
+  padding-top: 40px;
 }
-
-  mat-divider {
-    padding-top: 40px;
-  }
 
 mat-list h4:hover, mat-list-item:hover {
     font-weight: bold;
-    transform: scale(1.04);
+    transform: scale(1.03);
     transition: all .5s ease-in-out;
     cursor: pointer;
   }
