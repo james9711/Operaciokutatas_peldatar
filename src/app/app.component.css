@@ -1,11 +1,18 @@
+.top {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.bottom {
+  position: absolute;
+}
+
 .split {
   height: 100vh;
   position: fixed;
   overflow-x: hidden;
-}
-
-.top{
-  height: auto;
 }
 
 .left {
@@ -22,6 +29,10 @@
   background-color: rgba(184, 172, 158, 0.822);
 }
 
+.menu, .book {
+  margin-top: 80px;
+}
+
 @media screen and (max-width: 500px) {
   .right {
     width: 100%; /* The rights width is 100%, when the viewport is 500px or smaller */
@@ -34,7 +45,7 @@
 
 .menu button{
   font-weight: 500;
-  height: 60px;
+  height: 65px;
   opacity: 0.8;
   width: 100%;
   border: none;
@@ -54,7 +65,7 @@
 .menu h5{
   text-align: center;
   padding-top: 60px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
@@ -68,8 +79,8 @@
 .designedBy {
   font-family: 'Inconsolata', monospace;
   position: absolute;
-  left: 2vh;
-  bottom: 10vh;
+  left: 10px;
+  bottom: 10px;
   color: rgba(211, 208, 208, 0.884);
   font-size: 14px;
 }

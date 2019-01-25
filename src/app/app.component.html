@@ -14,8 +14,8 @@
   </div>
 </div>
 
-
-<div class="split left">
+<div class="bottom">
+  <div class="split left">
     <div class="menu">
       <h5 routerLink="/peldatar" routerLinkActive="active" title="Ugrás a menübe, az egész példatár megnyitása">MENU</h5>
       <button type="button" class="btn btn-outline-dark" routerLink="/tartalomjegyzek" title="Ugrás a tartalomjegyzékhez"><i class="material-icons">subject</i>  Tartalomjegyzék</button>
@@ -32,9 +32,11 @@
     </div>
     <div class="designedBy">Designed by: Berki Ádám</div>
   </div>
-  
+    
   <div class="split right">
-
+    <div class="book">
       <router-outlet></router-outlet>
-  
+    </div>
   </div>
+</div>
+
