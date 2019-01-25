@@ -128,11 +128,12 @@ li{
     0 -20px 1px -9px rgba(0,0,0,0.15);
     padding: 3%;
     cursor: pointer;
+    transition: all .5s ease-in-out;
 }
 
 .paperUp:hover {
   transform: scale(1.02);
-  transition: all .5s ease-in-out; 
+  transition: all .5s ease-in-out;
 }
 
 table, th, td {
