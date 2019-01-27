@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Chapter1Component implements OnInit {
 
+  codes: string[] = ['R', 'Lingo', 'SAS/OR'];
+  current_selected: string;
+  selectedItemValue: any;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSelection(e, v) {
+    console.error(e.option.selected,v); 
+    this.current_selected = e.option.value;
+    console.log(this.current_selected + " is choosed");
+  }
+
+  downloadCodes() {
+    console.log("");
+  }
 }
