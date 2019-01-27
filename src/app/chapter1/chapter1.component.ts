@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Chapter1Component implements OnInit {
 
-  codes: string[] = ['R', 'Lingo', 'SAS/OR'];
+  codes: string[] = ['Lingo', 'SAS/OR'];
   current_selected: string;
-  isCodesSelected: boolean[] = [false, false, false];
+  isCodesSelected: boolean[] = [false, false];
 
   constructor() { }
 
@@ -30,18 +30,24 @@ export class Chapter1Component implements OnInit {
         this.isCodesSelected[1] = !this.isCodesSelected[1];
         break;
       }
-      case this.codes[2]: {
-        this.isCodesSelected[2] = !this.isCodesSelected[2];
-        break;
-      }
     }
-
   }
 
   downloadCodes() {
     console.log(this.isCodesSelected);
-    console.log("R is: " + this.isCodesSelected[0]);
-    console.log("Lingo is: " + this.isCodesSelected[1]);
-    console.log("SAS/OR is: " + this.isCodesSelected[2]);
+    console.log("Lingo is: " + this.isCodesSelected[0]);
+    console.log("SAS/OR is: " + this.isCodesSelected[1]);
+    if(this.isCodesSelected[0]){
+      window.location.href="../../assets/sources/files/kodok/Lingo/1 fejezet feladatai/I_01.lg4";
+    }
+    if(this.isCodesSelected[1]){
+      window.open("../../assets/sources/files/kodok/Lingo/1 fejezet feladatai/I_02.lg4");
+      console.log("no file related to this task in the choose language")
+    }
+  }
+
+  downloadRcode(){
+    console.log("R code is opened");
+    window.open("../../assets/sources/files/kodok/r/1 fejezet feladatai/I_01.R");
   }
 }
