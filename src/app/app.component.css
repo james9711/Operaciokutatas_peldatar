@@ -62,6 +62,7 @@
   color: rgb(221, 218, 218);
   transform: scale(1.1);
   transition: transform .2s;
+  box-shadow: 0 8px 6px -6px black;
 }
 
 .menu h5{
@@ -205,4 +206,5 @@ h5 {
 .card {
   background-clip: border-box;
   border: 1px solid rgb(0, 0, 0, 0.125);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.562);
 }
