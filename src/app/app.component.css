@@ -22,6 +22,7 @@
   width: 15%;
   background-color: rgb(136, 129, 118);
   color: black;
+  box-shadow: 10px 6px 6px -6px black;
 }
 
 .right {
@@ -67,7 +68,7 @@
 
 .menu h5{
   text-align: center;
-  padding-top: 60px;
+  padding-top: 50px;
   padding-bottom: 20px;
   font-size: 30px;
   font-weight: bold;
@@ -130,7 +131,6 @@ li{
     0 -20px 1px -9px rgba(0,0,0,0.15);
     padding: 3%;
     cursor: pointer;
-    box-shadow: 0 8px 6px -6px black;
 }
 
 .paperUp:hover {
@@ -206,5 +206,5 @@ h5 {
 .card {
   background-clip: border-box;
   border: 1px solid rgb(0, 0, 0, 0.125);
-  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.562);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.897);
 }
