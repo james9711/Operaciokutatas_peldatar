@@ -1,325 +1,709 @@
 <h3 class="fejezetcim">I. Graﬁkusan megoldható feladatok: </h3>
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="elso-tab" data-toggle="tab" href="#elso" role="tab" aria-controls="elso" aria-selected="true">Elméleti bevezető</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="masodik-tab" data-toggle="tab" href="#masodik" role="tab" aria-controls="masodik" aria-selected="false">Kidolgozott példa</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="harmadik-tab" data-toggle="tab" href="#harmadik" role="tab" aria-controls="harmadik" aria-selected="false">Feladatok</a>
-        </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <!--1.1 content-->
-        <div class="tab-pane fade show active" id="elso" role="tabpanel" aria-labelledby="elso-tab">
-            <h4 class="alfejezetcim"> 1.1 Elméleti bevezető: </h4>
-            <div class="paperUp">
-                <div class="leiras">A következőkben 2-dimenziós lineáris programozási feladatokat oldunk meg graﬁkusan.
-                    A módszer azon alapul, hogy az egyenlőtlenség típusú feltételek félsíkokat határoznak meg a 2
-                    dimenziós térben, és ezen félsíkok metszeteként előállítható a lehetséges megoldások L halmaza,
-                    melynek ismeretében meghatározható az optimális megoldás. Egy két változót tartalmazó
-                    egyenlőtlenséget kielégítő pontok halmaza pontosan egy félsík. A problémák általában egynél több
-                    egyenlőtlenséget tartalmaznak. Ebből adódik, hogy egy pont akkor és csak akkor elégíti ki az összes
-                    tekintett egyenlőtlenséget, ha mindegyik, az egyenlőtlenségek által meghatározott félsíkban benne
-                    van. Ez viszont akkor és csak akkor lehetséges, ha a pont eleme az egyenlőtlenségek által
-                    meghatározott félsíkok metszetének. Tehát a lehetséges megoldások L halmaza pontosan az
-                    egyenlőtlenségek által meghatározott félsíkok metszetével egyenlő.</div>
-                <div class="leiras">A probléma megoldásához meg kell még határoznunk L egy olyan pontját, amelyben a
-                    célfüggvény maximum feladat esetén maximális, minimum feladat esetén pedig minimális értéket vesz
-                    fel. A 2-dimenziós, szemléletes megközelítés lehetővé teszi, hogy összefoglaljuk a lineáris
-                    programozási feladat optimális megoldásának létezésével kapcsolatos lehetőségeket.</div>
-                <li>1. Ha L korlátos, akkor L egy konvex sokszög és a feladatnak létezik optimális megoldása. A
-                    kompaktság a Heine Borel tétel és a Weierstrass tételből következik, hogy létezik optimális
-                    megoldás.</li>
-                <li>2. Ha L nem korlátos, akkor L zárt és véges sok csúcsponttal rendelkező konvex halmaz, továbbá
-                    létezik optimális megoldása a feladatnak, vagy a célfüggvény minimum feladatnál bármely kicsi
-                    (maximum feladatnál bármilyen nagy)értéket felvehet a lehetséges megoldások halmazán. Ilyenkor azt
-                    mondjuk, hogy a célfüggvény minimum feladat esetén alulról (maximum feladat esetén felülről) nem
-                    korlátos a lehetséges megoldások halmazán, és ebben az esetben nem létezik optimális megoldása a
-                    feladatnak.</li>
-                <li>3. Előfordulhat, hogy L üres halmaz. Ekkor a problémának nincsen lehetséges megoldása,így nem
-                    létezik optimális megoldás sem.</li>
-                <div class="leiras">A felsoroltak igazak tetszőleges lineáris programozási feladatra is.</div>
-            </div>
-        </div>
-        <!--1.2 content-->
-        <div class="tab-pane fade" id="masodik" role="tabpanel" aria-labelledby="masodik-tab">
-            <h4 class="alfejezetcim"> 1.2 Kidolgozott példa: </h4>
-            <div class="paperUp">
-                <h5>2.1. Elméleti levezetés, kidolgozás</h5>
-                <div class="leiras">Tekintsük az alábbi feladatot: </div>
-                <li>Egyárban kétféle terméket állítanak elő, asztalokat és szekrényeket. Ezekről ismertek az alábbiak:
-                </li>
-                <table align="center">
-                    <tr>
-                        <th>Termék</th>
-                        <th>Szekrény</th>
-                        <th>Asztal</th>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">Eladási ár (Ft/db)</td>
-                        <td>100000</td>
-                        <td>75000 </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">Előállítási költség (Ft/db)</td>
-                        <td>25000</td>
-                        <td>20000</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">Alapanyag-szükséglet (bútorlap/db)</td>
-                        <td>5</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left;">Előállítási idő (óra/db)</td>
-                        <td>10</td>
-                        <td>15</td>
-                    </tr>
-                </table>
-                <div class="leiras">Továbbá ismert még, hogy a gyár munkával töltött időszaka 1300 óra évente. A
-                    beszerezhető alapanyag is korlátozott, ez 400 bútorlap évente. Asztalból pedig évente maximum 70
-                    darabot készítenek.</div>
-                <li>Feladat: Határozzuk meg az évi maximális nyereséget biztosító termelési tervet!</li>
-                <div class="leiras"><span style="color:rgb(77, 45, 41);font-weight:bold}">Megoldás: </span> A szekrényből x-et, az asztalból pedig y darabot termelünk. Tehát megoldandó a következő matematikai programozási feladat:</div>
-                <table align="center">
-                    <tr>
-                        <td>10x </td>
-                        <td> + 15y </td>
-                        <td> ≤ </td>
-                        <td> 1300</td>
-                    </tr>
-                    <tr>
-                        <td>5x </td>
-                        <td> + 3y </td>
-                        <td> ≤ </td>
-                        <td> 400</td>
-                    </tr>
-                    <tr>
-                        <td> </td>
-                        <td> y </td>
-                        <td> ≤ </td>
-                        <td> 70</td>
-                    </tr>
-                    <tr>
-                        <td> </td>
-                        <td> y≥0, </td>
-                        <td> </td>
-                        <td> y≥0</td>
-                    </tr>
-                    <tr style="border-top: 4px solid rgb(77, 45, 41);">
-                        <td>75000x </td>
-                        <td> + 50000y </td>
-                        <td> -> </td>
-                        <td> max </td>
-                    </tr>
-                </table>
-                <div class="leiras">Első lépésként ábrázoljuk graﬁkonon a függvényeket.</div>
-                <img src="../../assets/sources/pictures/1fejezet_2.1diagram.PNG" class="diagram">
-                <div class="leiras">A célfüggvényünk a 75000x + 50000y = c → max ami ekvivalens azzal, hogy15 x + 10y =
-                    c/5000 → max.</div>
-                <img src="../../assets/sources/pictures/1fejezet_2.1diagram2.PNG" class="diagram">
-                <div class="leiras" style="left: 40px;"> -> A piros pont jelöli az optimumot. Mely koordinátáival
-                    megadva (46,56).</div>
-                <div class="leiras">Tehát Szekrényből 46 darabot, míg asztalból 56 darabot tud készíteni a gyár, hogy a
-                    maximális nyereséget elérje.</div>
-                <h5 style="margin-top: 40px">2.2. IBM CPLEX - Példa kód <button class="btn btn-outline-danger" title="IBM CPLEX példakód letöltése"><i class="material-icons">save_alt</i></button> </h5>
 
-                <h5>2.3. Lingo - Példa kód <button class="btn btn-outline-danger" title="Lingo példakód letöltése"><i class="material-icons">save_alt</i></button></h5>
-                <textarea highlight-js [options]="" [lang]="">
-                    >
-                    !**********************************************************************************
-                    Operációkutatás szoftveres példatár
-                    I. Grafikusan megoldható feladatok 01. példa - Szekrény, asztal gyártás 
-                    x1 : Szekrény
-                    x2 : Asztal
-                    **********************************************************************************;
-                    [Nyereseg] MAX = (100000-25000)*x + (75000-20000)*y;
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="elso-tab" data-toggle="tab" href="#elso" role="tab" aria-controls="elso" aria-selected="true">Elméleti bevezető</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="masodik-tab" data-toggle="tab" href="#masodik" role="tab" aria-controls="masodik" aria-selected="false">Kidolgozott példa</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="harmadik-tab" data-toggle="tab" href="#harmadik" role="tab" aria-controls="harmadik" aria-selected="false">Feladatok</a>
+    </li>
+</ul>
     
-                    !Munkaóra feltétel;                   
-                    [Munkaora] 10*x + 15*y <= 1300;
-                    
-                    !Rendelkezésre álló bútorlap;                   
-                    [Butorlap] 5*x +  3*y <=  400;
-                    
-                    !Gyártható asztalok száma;
-                    [EladasoK] y <=   70;
-                    
-                    
-                    !*********************************************************************************
-                    Debreceni Egyetem, Informatikai Kar 				2016
-                    **********************************************************************************;
-                </textarea>
-
-                <textarea highlight-js [options]="" [lang]="">
-                    >
-                    Global optimal solution found . 
-                    Objective value : 6555556. 
-                    Infeasibilities : 0.000000
-                    Total solver iterations : 2 
-                    Elapsed runtime seconds : 0.03
-                    
-                    Model Class : LP
-                    
-                    Total variables : 2 
-                    Nonlinear variables : 0 
-                    Integer variables : 0
-                    
-                    Total constraints : 4 
-                    Nonlinear constraints : 0
-                    Total nonzeros :   7
-                    Nonlinear nonzeros : 0
-                        
-                    Variable        Value         Reduced Cost 
-                        X         46.66667          0.000000 
-                        Y         55.55556          0.000000
-                    
-                    Row         Slack or Surplus   Dual Price 
-                    NYERESEG      6555556.          1.000000 
-                    MUNKAORA      0.000000          1111.111 
-                    BUTORLAP      0.000000          12777.78 
-                    ELADASIK      14.44444          0.000000
-                </textarea>
-
-                <h5>2.4. R - Példa kód <button class="btn btn-outline-danger" title="R példakód letöltése"><i class="material-icons">save_alt</i></button> </h5>
-                <textarea highlight-js [options]="{}" [lang]="">
-                    >
-                    #***********************************************************************************
-                    # Operációkutatás szoftveres példatár
-                    #
-                    # I. Grafikusan megoldható feladatok
-                    #
-                    # 01. feladat - Szekrény, asztal gyártás
-                    # 
-                    #***********************************************************************************
-                    
-                    library(lpSolveAPI)
-                    
-                    #A célfüggvényemben 2 változó lesz. 3 feltételem lesz, de azokat később adom hozzá a modellhez.
-                    lpmodel<-make.lp(0,2)
-                    
-                    #Alapesetben minimalizációra van beállítva, ezért átállítjuk maximalizációra.
-                    lp.control(lpmodel,sense='max')
-                    
-                    #Beállítom a célfüggvény változók együtthatóit.
-                    set.objfn(lpmodel,c(75000,55000))
-                    
-                    #Megadom a feltételeket.
-                    #Éves munkaóra
-                    add.constraint(lpmodel, c(10,15), type = "<=", 1300)
-                    #Rendelkezésre álló bútorlap
-                    add.constraint(lpmodel, c(5,3), type = "<=", 400)
-                    #Asztalok száma
-                    add.constraint(lpmodel, c(0,1), type = "<=", 70)
-                    
-                    #Alapesetben valósként kezeli a változókat. Ezt állítjuk át egészre.
-                    set.type(lpmodel,1,c("integer"))
-                    set.type(lpmodel,2,c("integer"))
-                    
-                    #A lpmodel dimenzió neveinek elnevezéseinek beállítása
-                    dimnames(lpmodel)<-list(c("Munkaóra","Alapanyag","Asztalkorlát"),c("Szekrény","Asztal"))
-                    
-                    #Az lpmodel megjelenése (ellenörízhetjük, hogy jól adtuk meg a dolgokat).
-                    lpmodel
-                    
-                    # Model name: 
-                    #                 Szekrény    Asztal          
-                    # Maximize         75000     55000              <- Célfüggvény
-                    # Munkaóra            10        15  <=  1300    
-                    # Alapanyag            5         3  <=   400    <- Feltételek
-                    # Asztalkorlát         0         1  <=    70
-                    # Kind               Std       Std          
-                    # Type               Int       Int              <- Egészek lesznek a döntési változóink
-                    # Upper              Inf       Inf              
-                    # Lower                0         0              <- A változóink milyen érteket lehet fel (alapesetben "x1>0")
-                    
-                    #A felépített modell megoldása
-                    solve(lpmodel)
-                    
-                    #Célfüggvény értékének lekérése
-                    get.objective(lpmodel) #6550000
-                    
-                    #A megoldást adó változók értékének lekérése
-                    get.variables(lpmodel) #47 55 -> 47 szekrényt és 55 asztalt kell gyártani.
-                    
-                    #*******************************************************************************
-                    # Debreceni Egyetem, Informatikai Kar 		    2016
-                    #*******************************************************************************                            
-                </textarea>
-
-                <h5>2.5. SAS/OR - Példa kód <button class="btn btn-outline-danger" title="SAS/ OR példakód letöltése"><i class="material-icons">save_alt</i></button> </h5>
-                <textarea highlight-js [options]="{}" [lang]="">
-                   
-                </textarea>
-            </div>
+<div class="tab-content" id="myTabContent">
+    <!--1.1 content-->
+    <div class="tab-pane fade show active" id="elso" role="tabpanel" aria-labelledby="elso-tab">
+        <h4 class="alfejezetcim"> 1.1 Elméleti bevezető: </h4>
+        <div class="paperUp">
+            <div class="leiras">A következőkben 2-dimenziós lineáris programozási feladatokat oldunk meg graﬁkusan.
+                A módszer azon alapul, hogy az egyenlőtlenség típusú feltételek félsíkokat határoznak meg a 2
+                dimenziós térben, és ezen félsíkok metszeteként előállítható a lehetséges megoldások L halmaza,
+                melynek ismeretében meghatározható az optimális megoldás. Egy két változót tartalmazó
+                egyenlőtlenséget kielégítő pontok halmaza pontosan egy félsík. A problémák általában egynél több
+                egyenlőtlenséget tartalmaznak. Ebből adódik, hogy egy pont akkor és csak akkor elégíti ki az összes
+                tekintett egyenlőtlenséget, ha mindegyik, az egyenlőtlenségek által meghatározott félsíkban benne
+                van. Ez viszont akkor és csak akkor lehetséges, ha a pont eleme az egyenlőtlenségek által
+                meghatározott félsíkok metszetének. Tehát a lehetséges megoldások L halmaza pontosan az
+                egyenlőtlenségek által meghatározott félsíkok metszetével egyenlő.</div>
+            <div class="leiras">A probléma megoldásához meg kell még határoznunk L egy olyan pontját, amelyben a
+                célfüggvény maximum feladat esetén maximális, minimum feladat esetén pedig minimális értéket vesz
+                fel. A 2-dimenziós, szemléletes megközelítés lehetővé teszi, hogy összefoglaljuk a lineáris
+                programozási feladat optimális megoldásának létezésével kapcsolatos lehetőségeket.</div>
+            <li>1. Ha L korlátos, akkor L egy konvex sokszög és a feladatnak létezik optimális megoldása. A
+                kompaktság a Heine Borel tétel és a Weierstrass tételből következik, hogy létezik optimális
+                megoldás.</li>
+            <li>2. Ha L nem korlátos, akkor L zárt és véges sok csúcsponttal rendelkező konvex halmaz, továbbá
+                létezik optimális megoldása a feladatnak, vagy a célfüggvény minimum feladatnál bármely kicsi
+                (maximum feladatnál bármilyen nagy)értéket felvehet a lehetséges megoldások halmazán. Ilyenkor azt
+                mondjuk, hogy a célfüggvény minimum feladat esetén alulról (maximum feladat esetén felülről) nem
+                korlátos a lehetséges megoldások halmazán, és ebben az esetben nem létezik optimális megoldása a
+                feladatnak.</li>
+            <li>3. Előfordulhat, hogy L üres halmaz. Ekkor a problémának nincsen lehetséges megoldása,így nem
+                létezik optimális megoldás sem.</li>
+            <div class="leiras">A felsoroltak igazak tetszőleges lineáris programozási feladatra is.</div>
         </div>
-        <!--1.3 content-->
-        <div class="tab-pane fade" id="harmadik" role="tabpanel" aria-labelledby="harmadik-tab">
-            <h4 class="alfejezetcim">1.3 Feladatok: </h4>
-            <div class="paperUp">
-                <!--feladat1-->
-                <div class="card">
-                        <div class="card-header">
-                            1.feladat
-                        </div>
-                        <div class="card-body">
-                        <div class="leiras">Egy gyárban kétféle terméket állítanak elő: asztalokat és székeket.
-                            Ezekről ismertek az alábbiak:</div>
-                        <table align="center">
-                            <tr>
-                                <th>Termék</th>
-                                <th>Szekrény</th>
-                                <th>Asztal</th>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Eladási ár (Ft/db)</td>
-                                <td>100000</td>
-                                <td>75000 </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Előállítási költség (Ft/db)</td>
-                                <td>25000</td>
-                                <td>20000</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Alapanyag-szükséglet (bútorlap/db)</td>
-                                <td>5</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;">Előállítási idő (óra/db)</td>
-                                <td>10</td>
-                                <td>15</td>
-                            </tr>
-                        </table>
-                        <div class="leiras">Továbbá ismert még, hogy a gyár munkával töltött időszaka 1300 óra
-                            évente. A beszerezhető alapanyag is korlátozott, ez 400 bútorlap évente. Asztalból pedig
-                            évente maximum 70 darabot készítenek.</div>
-                        <div class="leiras" style="color: rgb(160, 47, 47); margin-top: 20px; margin-bottom: 20px;">Határozzuk meg az évi maximális nyereséget
-                            biztosító termelési tervet!</div>
-                        
-                        <!--download codes-->
-                        <div class="card">
-                            <div class="card-header">
-                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
-                                Forráskódok letöltése</button>
-                            </div>
-                        
-                            <div id="downloadableCodes" class="collapse show">
-                            <div class="card-body">
-                                <mat-selection-list id="DownloadCodes">
-                                    <mat-list-item (click)="downloadRcode()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
-                                    <mat-divider></mat-divider>
-                                    <mat-list-item (click)="downloadLingocode()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
-                                    <mat-divider></mat-divider>
-                                    <mat-list-item (click)="downloadSascode()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése (forráskód nem elérhető)</mat-list-item>
-                                </mat-selection-list>
-                            </div>
-                        </div>
+    </div>
 
+    <!--1.2 content-->
+    <div class="tab-pane fade" id="masodik" role="tabpanel" aria-labelledby="masodik-tab">
+        <h4 class="alfejezetcim"> 1.2 Kidolgozott példa: </h4>
+        <div class="paperUp">
+            <h5>2.1. Elméleti levezetés, kidolgozás</h5>
+            <div class="leiras">Tekintsük az alábbi feladatot: </div>
+            <li>Egyárban kétféle terméket állítanak elő, asztalokat és szekrényeket. Ezekről ismertek az alábbiak:
+            </li>
+            <table align="center">
+                <tr>
+                    <th>Termék</th>
+                    <th>Szekrény</th>
+                    <th>Asztal</th>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Eladási ár (Ft/db)</td>
+                    <td>100000</td>
+                    <td>75000 </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Előállítási költség (Ft/db)</td>
+                    <td>25000</td>
+                    <td>20000</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Alapanyag-szükséglet (bútorlap/db)</td>
+                    <td>5</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Előállítási idő (óra/db)</td>
+                    <td>10</td>
+                    <td>15</td>
+                </tr>
+            </table>
+            <div class="leiras">Továbbá ismert még, hogy a gyár munkával töltött időszaka 1300 óra évente. A
+                beszerezhető alapanyag is korlátozott, ez 400 bútorlap évente. Asztalból pedig évente maximum 70
+                darabot készítenek.</div>
+            <li>Feladat: Határozzuk meg az évi maximális nyereséget biztosító termelési tervet!</li>
+            <div class="leiras"><span style="color:rgb(77, 45, 41);font-weight:bold}">Megoldás: </span> A szekrényből x-et, az asztalból pedig y darabot termelünk. Tehát megoldandó a következő matematikai programozási feladat:</div>
+            <table align="center">
+                <tr>
+                    <td>10x </td>
+                    <td> + 15y </td>
+                    <td> ≤ </td>
+                    <td> 1300</td>
+                </tr>
+                <tr>
+                    <td>5x </td>
+                    <td> + 3y </td>
+                    <td> ≤ </td>
+                    <td> 400</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> y </td>
+                    <td> ≤ </td>
+                    <td> 70</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> y≥0, </td>
+                    <td> </td>
+                    <td> y≥0</td>
+                </tr>
+                <tr style="border-top: 4px solid rgb(77, 45, 41);">
+                    <td>75000x </td>
+                    <td> + 50000y </td>
+                    <td> -> </td>
+                    <td> max </td>
+                </tr>
+            </table>
+            <div class="leiras">Első lépésként ábrázoljuk graﬁkonon a függvényeket.</div>
+            <img src="../../assets/sources/pictures/1fejezet_2.1diagram.PNG" class="diagram">
+            <div class="leiras">A célfüggvényünk a 75000x + 50000y = c → max ami ekvivalens azzal, hogy15 x + 10y =
+                c/5000 → max.</div>
+            <img src="../../assets/sources/pictures/1fejezet_2.1diagram2.PNG" class="diagram">
+            <div class="leiras" style="left: 40px;"> -> A piros pont jelöli az optimumot. Mely koordinátáival
+                megadva (46,56).</div>
+            <div class="leiras">Tehát Szekrényből 46 darabot, míg asztalból 56 darabot tud készíteni a gyár, hogy a
+                maximális nyereséget elérje.</div>
+            
+            <h5 style="margin-top: 40px">2.2. IBM CPLEX - Példa kód <button class="btn btn-outline-danger" title="IBM CPLEX példakód letöltése"><i class="material-icons">save_alt</i></button> </h5>
+            <textarea highlight-js [options]="{}" [lang]="">
+                
+            </textarea>
+
+            <h5>2.3. Lingo - Példa kód <button class="btn btn-outline-danger" title="Lingo példakód letöltése"><i class="material-icons">save_alt</i></button></h5>
+            <textarea highlight-js [options]="" [lang]="">
+                >
+                !**********************************************************************************
+                Operációkutatás szoftveres példatár
+                I. Grafikusan megoldható feladatok 01. példa - Szekrény, asztal gyártás 
+                x1 : Szekrény
+                x2 : Asztal
+                **********************************************************************************;
+                [Nyereseg] MAX = (100000-25000)*x + (75000-20000)*y;
+
+                !Munkaóra feltétel;                   
+                [Munkaora] 10*x + 15*y <= 1300;
+                
+                !Rendelkezésre álló bútorlap;                   
+                [Butorlap] 5*x +  3*y <=  400;
+                
+                !Gyártható asztalok száma;
+                [EladasoK] y <=   70;
+                
+                
+                !*********************************************************************************
+                Debreceni Egyetem, Informatikai Kar 				2016
+                **********************************************************************************;
+            </textarea>
+
+            <textarea highlight-js [options]="" [lang]="">
+                >
+                Global optimal solution found . 
+                Objective value : 6555556. 
+                Infeasibilities : 0.000000
+                Total solver iterations : 2 
+                Elapsed runtime seconds : 0.03
+                
+                Model Class : LP
+                
+                Total variables : 2 
+                Nonlinear variables : 0 
+                Integer variables : 0
+                
+                Total constraints : 4 
+                Nonlinear constraints : 0
+                Total nonzeros :   7
+                Nonlinear nonzeros : 0
+                    
+                Variable        Value         Reduced Cost 
+                    X         46.66667          0.000000 
+                    Y         55.55556          0.000000
+                
+                Row         Slack or Surplus   Dual Price 
+                NYERESEG      6555556.          1.000000 
+                MUNKAORA      0.000000          1111.111 
+                BUTORLAP      0.000000          12777.78 
+                ELADASIK      14.44444          0.000000
+            </textarea>
+
+            <h5>2.4. R - Példa kód <button class="btn btn-outline-danger" title="R példakód letöltése"><i class="material-icons">save_alt</i></button> </h5>
+            <textarea highlight-js [options]="{}" [lang]="">
+                >
+                #***********************************************************************************
+                # Operációkutatás szoftveres példatár
+                #
+                # I. Grafikusan megoldható feladatok
+                #
+                # 01. feladat - Szekrény, asztal gyártás
+                # 
+                #***********************************************************************************
+                
+                library(lpSolveAPI)
+                
+                #A célfüggvényemben 2 változó lesz. 3 feltételem lesz, de azokat később adom hozzá a modellhez.
+                lpmodel<-make.lp(0,2)
+                
+                #Alapesetben minimalizációra van beállítva, ezért átállítjuk maximalizációra.
+                lp.control(lpmodel,sense='max')
+                
+                #Beállítom a célfüggvény változók együtthatóit.
+                set.objfn(lpmodel,c(75000,55000))
+                
+                #Megadom a feltételeket.
+                #Éves munkaóra
+                add.constraint(lpmodel, c(10,15), type = "<=", 1300)
+                #Rendelkezésre álló bútorlap
+                add.constraint(lpmodel, c(5,3), type = "<=", 400)
+                #Asztalok száma
+                add.constraint(lpmodel, c(0,1), type = "<=", 70)
+                
+                #Alapesetben valósként kezeli a változókat. Ezt állítjuk át egészre.
+                set.type(lpmodel,1,c("integer"))
+                set.type(lpmodel,2,c("integer"))
+                
+                #A lpmodel dimenzió neveinek elnevezéseinek beállítása
+                dimnames(lpmodel)<-list(c("Munkaóra","Alapanyag","Asztalkorlát"),c("Szekrény","Asztal"))
+                
+                #Az lpmodel megjelenése (ellenörízhetjük, hogy jól adtuk meg a dolgokat).
+                lpmodel
+                
+                # Model name: 
+                #                 Szekrény    Asztal          
+                # Maximize         75000     55000              <- Célfüggvény
+                # Munkaóra            10        15  <=  1300    
+                # Alapanyag            5         3  <=   400    <- Feltételek
+                # Asztalkorlát         0         1  <=    70
+                # Kind               Std       Std          
+                # Type               Int       Int              <- Egészek lesznek a döntési változóink
+                # Upper              Inf       Inf              
+                # Lower                0         0              <- A változóink milyen érteket lehet fel (alapesetben "x1>0")
+                
+                #A felépített modell megoldása
+                solve(lpmodel)
+                
+                #Célfüggvény értékének lekérése
+                get.objective(lpmodel) #6550000
+                
+                #A megoldást adó változók értékének lekérése
+                get.variables(lpmodel) #47 55 -> 47 szekrényt és 55 asztalt kell gyártani.
+                
+                #*******************************************************************************
+                # Debreceni Egyetem, Informatikai Kar 		    2016
+                #*******************************************************************************                            
+            </textarea>
+
+            <h5>2.5. SAS/OR - Példa kód <button class="btn btn-outline-danger" title="SAS/ OR példakód letöltése"><i class="material-icons">save_alt</i></button> </h5>
+            <textarea highlight-js [options]="{}" [lang]="">
+                
+            </textarea>
+        </div>
+    </div>
+
+    <!--1.3 content-->
+    <div class="tab-pane fade" id="harmadik" role="tabpanel" aria-labelledby="harmadik-tab">
+        <h4 class="alfejezetcim">1.3 Feladatok: </h4>
+        <div class="paperUp">
+
+            <!--feladat1-->
+            <div class="card">
+                    <div class="card-header">
+                        1.feladat
+                    </div>
+                    <div class="card-body">
+                    <div class="leiras">Egy gyárban kétféle terméket állítanak elő: asztalokat és székeket.
+                        Ezekről ismertek az alábbiak:</div>
+                    <table align="center">
+                        <tr>
+                            <th>Termék</th>
+                            <th>Szekrény</th>
+                            <th>Asztal</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Eladási ár (Ft/db)</td>
+                            <td>100000</td>
+                            <td>75000 </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Előállítási költség (Ft/db)</td>
+                            <td>25000</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Alapanyag-szükséglet (bútorlap/db)</td>
+                            <td>5</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Előállítási idő (óra/db)</td>
+                            <td>10</td>
+                            <td>15</td>
+                        </tr>
+                    </table>
+                    <div class="leiras">Továbbá ismert még, hogy a gyár munkával töltött időszaka 1300 óra
+                        évente. A beszerezhető alapanyag is korlátozott, ez 400 bútorlap évente. Asztalból pedig
+                        évente maximum 70 darabot készítenek.</div>
+                    <div class="kerdes">Határozzuk meg az évi maximális nyereséget
+                        biztosító termelési tervet!</div>
+                    
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!--feladat2-->
+        <div class="card">
+            <div class="card-header">
+                2.feladat
+            </div>
+            <div class="card-body">
+                <div class="leiras">Egy összejövetelre szendvicseket készítünk. Két fajtát szeretnénk
+                    elkészíteni, az első fajtához 2 dkg vajra, 2 dkg sonkára, 2 dkg sajtra, 1 dkg uborkára és
+                    egy szelet kenyérre van szükség, míg a második fajtánál 1 dkg vaj, 1.5 dkg szalámi, 3 dkg
+                    sajt, 1 dkg uborka és szintén egy szelet kenyér szükséges. Kenyérből korlátlan mennyiség
+                    áll rendelkezésünkre, de vajból csak 45 dkg, sonkából 60 dkg, szalámiból 35 dkg, sajtból
+                    75 dkg és uborkából pedig 35 dkg van.</div>
+                <div class="kerdes">Maximálisan hány szendvicset tudunk
+                    elkészíteni? Az egyes fajtákból külön-külön hány darabot?</div>
+                
+                <!--download codes-->
+                <div class="card">
+                    <div class="card-header">
+                        <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                        Forráskódok letöltése</button>
+                    </div>
+                
+                    <div id="downloadableCodes" class="collapse show">
+                    <div class="card-body">
+                        <mat-selection-list id="DownloadCodes">
+                            <mat-list-item (click)="downloadRcode2()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadLingocode2()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadSascode2()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                        </mat-selection-list>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+
+        <!--feladat3-->
+        <div class="card">
+            <div class="card-header">
+                3.feladat
+            </div>
+            <div class="card-body">
+                <div class="leiras">Egy kis ruházati vállalat női kosztümöket és konfekció öltönyöket
+                    gyárt. Minden kosztümön 4 $ haszna van, míg minden öltönyön 3 $. Minden öltöny illetve
+                    kosztüm egy óra szabást igényel. Egy kiszabott kosztümöt 2, míg egy kiszabott öltönyt 1
+                    óra alatt lehet megvarrni. Heti termelési terv elkészítéséhez tudjuk, hogy egy héten maximum
+                    40 óra fordítható szabásra és 60 varrásra. Az anyagból rendelkezésre álló mennyiség
+                    feltételezésünk szerint korlátlan.</div>
+                <div class="kerdes">Adjunk tanácsot a cégnek, hogy a maximális
+                    proﬁthoz mennyi kosztümöt és öltönyt készítsen egy héten!</div>
+                
+                <!--download codes-->
+                <div class="card">
+                    <div class="card-header">
+                        <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                        Forráskódok letöltése</button>
+                    </div>
+                
+                    <div id="downloadableCodes" class="collapse show">
+                    <div class="card-body">
+                        <mat-selection-list id="DownloadCodes">
+                            <mat-list-item (click)="downloadRcode3()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadLingocode3()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadSascode3()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése</mat-list-item>
+                        </mat-selection-list>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+
+        <!--feladat4-->
+        <div class="card">
+            <div class="card-header">
+                4.feladat
+            </div>
+            <div class="card-body">
+                <div class="leiras"> Jones farmer kétféle süteményt süt (csokoládés és vaníliás), hogy
+                    kiegészítse jövedelmét. Egy csokoládés sütemény 1 $-ért, egy vaníliás 50 centért
+                    adható el. Minden csokoládés süteménybe kell 4 tojás és 20 percig kell sütni. Minden
+                    vaníliás sütibe kell 1 tojás és 40 percig kell sütni. Rendelkezésre áll 8 óra sütési
+                    idő valamint 30 tojás.</div>
+                <div class="kerdes">Fogalmazzunk meg LP-t a proﬁt
+                    maximalizálására és oldjuk meg graﬁkusan a feladatot. (Törtszámú sütemény megengedett.)</div>
+                
+                <!--download codes-->
+                <div class="card">
+                    <div class="card-header">
+                        <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                        Forráskódok letöltése</button>
+                    </div>
+                
+                    <div id="downloadableCodes" class="collapse show">
+                    <div class="card-body">
+                        <mat-selection-list id="DownloadCodes">
+                            <mat-list-item (click)="downloadRcode4()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadLingocode4()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadSascode4()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                        </mat-selection-list>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+
+        <!--feladat5-->
+        <div class="card">
+            <div class="card-header">
+                5.feladat
+            </div>
+            <div class="card-body">
+                <div class="leiras"> Egy bútorgyártó cég tömör fából és préselt lapból készít
+                    asztalokat. Egy tömörfa asztalból származó haszon 1 $ egy préselt lapból 2 dollár, az
+                    elvárásuk, hogy legalább 6 $ haszon keletkezzen! Egy préselt lap asztalhoz 1 kg fűrészporra
+                    van szükség, a tömörfa asztal gyártásánál 1 kg fűrészpor, mint melléktermék keletkezik,
+                    a gyárnak tartalékban maximum 3 kg felhasználható fűrészpora van. Mindkét asztal
+                    gyártásához 1-1 tubus ragasztó is kell, amiből 10 tubus áll a rendelkezésre! A marketing
+                    osztály szerint minden legyártott tömörfa asztal 2 ponttal növeli a gyár termékeinek
+                    népszerűségét, színvonalát, míg egy legyártott préselt asztal 3 ponttal csökkenti!</div>
+                <div class="kerdes">Adjunk tanácsot hány tömörfa és hány
+                    préselt asztalt készítsen a cég, hogy a színvonal maximális legyen!</div>
+                
+                <!--download codes-->
+                <div class="card">
+                    <div class="card-header">
+                        <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                        Forráskódok letöltése</button>
+                    </div>
+                
+                    <div id="downloadableCodes" class="collapse show">
+                    <div class="card-body">
+                        <mat-selection-list id="DownloadCodes">
+                            <mat-list-item (click)="downloadRcode5()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadLingocode5()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadSascode5()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                        </mat-selection-list>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+
+        <!--feladat6-->
+        <div class="card">
+            <div class="card-header">
+                6.feladat
+            </div>
+            <div class="card-body">
+                <div class="leiras"> Egy tej-gazdaságban két fajta állatot tartanak tehenet és kecskét. Jelenleg
+                    10 tehén és 20 kecske van az állományban. Az állatokat elsősorban a tejtermelés miatt
+                    nevelik. Egy tehén átlagosan 10 l, míg egy kecske 3 l tejet ad naponta. A tehéntej ára
+                    literenként 100 Ft, míg a kecsketejé 150 Ft. Egy tehén tartásához 5, míg egy kecskéhez 4
+                    egység terület szükséges, a gazdák összesen 160 egységnyi területen tarthatják az
+                    állatokat. Az élelmezés szempontjából egy tehénre naponta 5 $-t míg egy kecskére 3-at kell
+                    költeni. élelmezésre összesen napi 500 $ jut a gazdaságban.</div>
+                <div class="kerdes">Adjunk tanácsot a gazdáknak, hogyan
+                    változtassák meg a jelenlegi állományt (el is adhat állatot, vehet is állatot), hogy a
+                    feltételeikhez mérten optimális legyen a tej eladás szempontjából!</div>
+                
+                <!--download codes-->
+                <div class="card">
+                    <div class="card-header">
+                        <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                        Forráskódok letöltése</button>
+                    </div>
+                
+                    <div id="downloadableCodes" class="collapse show">
+                    <div class="card-body">
+                        <mat-selection-list id="DownloadCodes">
+                            <mat-list-item (click)="downloadRcode6()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadLingocode6()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadSascode6()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                        </mat-selection-list>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+
+        <!--feladat7-->
+        <div class="card">
+            <div class="card-header">
+                7.feladat
+            </div>
+            <div class="card-body">
+                <div class="leiras"> bEgy gyárban kétféle terméket gyártanak. Az egyikből havonta legalább 12
+                    raklapnyit állítanak elő, a másikból pedig 8-at. Az első termék elkészítéséhez 15
+                    munkásra van szükség, míg a másodikhoz 30. A gyár össztermelése 40 raklapnál nem lehet
+                    több. Az Az első termékből raklaponkénti tiszta haszon 150000 Ft, a másodikból pedig 220000
+                    Ft. Havonta maximálisan 600 munkás vehet részt a termelésben.</div>
+                <div class="kerdes">a) Hogyan szervezzük meg a termelést, hogy a
+                    nyereség havonta 5000000 Ft legyen?</div>
+                <div class="kerdes">b) Mikor lesz maximális a nyereség, és
+                    mekkora ez az összeg?</div>
+                
+                <!--download codes-->
+                <div class="card">
+                    <div class="card-header">
+                        <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                        Forráskódok letöltése</button>
+                    </div>
+                
+                    <div id="downloadableCodes" class="collapse show">
+                    <div class="card-body">
+                        <mat-selection-list id="DownloadCodes">
+                            <mat-list-item (click)="downloadRcode7()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadLingocode7()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadSascode7()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                        </mat-selection-list>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+
+        <!--feladat8-->
+        <div class="card">
+            <div class="card-header">
+                8.feladat
+            </div>
+            <div class="card-body">
+                <div class="leiras"> Egy útszéli hamburgerezőben kétféle hamburgert lehet vásárolni,
+                    csirkéset, ami 800 Ft-ba kerül és marhaburgert, aminek az ára 1100 Ft. A tulajdonos szeretné
+                    tudni, mennyi lehet a maximális napi bevétele, ha a meglévő alapanyagokból dolgoznak és a
+                    forgalom is megfelelő.</div>
+                <div class="leiras">A raktárban található 80 buci, 2 kg sajt, 5 kg csirkehús, 4 kg marhahús és
+                    3,5 kg zöldség.</div>
+                <div class="leiras">Egy csirkeburger elkészítéséhez szükség van egy bucira, 10 dkg csirkehúsra,
+                    4 dkg sajtra és 10 dkg zöldségre.</div>
+                <div class="leiras">Egy marhaburgerhez szükséges szintén egy buci, 13 dkg marhahús, 8 dkg kell
+                    sajtból is és zöldségből is.</div>
+                <div class="kerdes">a) Lehet e a bevétel 30 000 Ft?</div>
+                <div class="kerdes">b) Elérheti e a bevétel a 40 000 Ft-os
+                    összeget?</div>
+                <div class="kerdes">c) Mennyi lehet a maximális bevétek, és ekkor
+                    hány hamburgert adnak el?</div>
+                
+                <!--download codes-->
+                <div class="card">
+                    <div class="card-header">
+                        <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                        Forráskódok letöltése</button>
+                    </div>
+                
+                    <div id="downloadableCodes" class="collapse show">
+                    <div class="card-body">
+                        <mat-selection-list id="DownloadCodes">
+                            <mat-list-item (click)="downloadRcode8()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadLingocode8()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadSascode8()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                        </mat-selection-list>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+
+        <!--feladat9-->
+        <div class="card">
+            <div class="card-header">
+                9.feladat
+            </div>
+            <div class="card-body">
+                <div class="leiras">Juli néni gofrit és palacsintát árul a strandon. Két alapanyag szükséges
+                    ezek előállításához: tej és liszt. Minden eladott gofri után 50 forint és minden eladott
+                    palacsinta után 40 forint proﬁtja lesz. Egy gofrihoz 10 dkg liszt, 13 cl tej szükséges. Egy
+                    palacsintához 8 dkg liszt, 6.5 cl tej szükséges. Viszont Juli néninek végesek a készletei,
+                    így lisztből csak 8 kg, tejből 84.5 dl áll rendelkezésre.</div>
+                <div class="kerdes">Mennyi palacsintát és mennyi gofrit
+                    csináljon, hogy maximális legyen a proﬁtja?</div>
+                
+                <!--download codes-->
+                <div class="card">
+                    <div class="card-header">
+                        <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                        Forráskódok letöltése</button>
+                    </div>
+                
+                    <div id="downloadableCodes" class="collapse show">
+                    <div class="card-body">
+                        <mat-selection-list id="DownloadCodes">
+                            <mat-list-item (click)="downloadRcode9()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadLingocode9()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadSascode9()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                        </mat-selection-list>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+
+        <!--feladat10-->
+        <div class="card">
+            <div class="card-header">
+                10.feladat
+            </div>
+            <div class="card-body">
+                <div class="leiras">Rozi néni gyermek holmikat köt szabadidejében. Kétféle terméket készít:
+                    sapkátés kardigánt. Nyugdíjából hetente 250 dkg fonalat tud venni és felhasználni. Ha egy
+                    héten csak sapkát köt akkor 40 darabot tud elkészíteni, ha csak kardigánt akkor 20 darabot.
+                    Egy sapkához 5 dkg fonalra van szükség, egy kardigánhoz pedig 20 dkg-ra. Egy nyugdíjasokat
+                    segítő szervezet vásárolna Rozi nénitől kötött baba holmikat, de csak abban az esetben ha
+                    hetente legalább 45 sapkát és 10 kardigánt el tud készíteni. Ebben az esetben adna a cég
+                    2000 Ft-ot minden sapka és 4000 Ft-ot minden kardigán után.</div>
+                <div class="kerdes">Adjunk tanácsot Rozi néninek, hogy a meglévő
+                    készletéből heti bontásban hány kardigánt és sapkát készítsen, hogy a bevétele
+                    maximális legyen!</div>
+                
+                <!--download codes-->
+                <div class="card">
+                    <div class="card-header">
+                        <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                        Forráskódok letöltése</button>
+                    </div>
+                
+                    <div id="downloadableCodes" class="collapse show">
+                    <div class="card-body">
+                        <mat-selection-list id="DownloadCodes">
+                            <mat-list-item (click)="downloadRcode10()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadLingocode10()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadSascode10()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                        </mat-selection-list>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+
+        <!--feladat11-->
+        <div class="card">
+            <div class="card-header">
+                11.feladat
+            </div>
+            <div class="card-body">
+                <div class="leiras">A gyerekemet nyári táborokba szeretném küldeni. Két lehetőség közül
+                    választhatok: Lovastábor és úszótábor. A napi költségek a lovastáborban 10000 Ft, az
+                    úszótáborban pedig 12000 Ft. A lovastábor legalább 5 napra foglalható, míg az úszótábor
+                    legalább 7 nap. összesen 120000 Ft-om van a táborokra, de szeretném ha minél több napot
+                    töltene a gyermekem a nyáron táborban. Az utazást illetően a gyerek nyári kedvezményes
+                    utazásra jogosult összesen 100 km-re. A lovastábor esetén megtenne naponta 20 km-t, míg az
+                    úszótábor esetén 5 km-t. Mindkét táborban szeretném ha részt venne!</div>
+                <div class="kerdes">a) Melyik táborba hány napra írassam be a
+                    gyereket, annak érdekében hogy minél több napot táborozzon és az utazási valamint pénzügyi
+                    kereteimbe is beleférjek?</div>
+                <div class="kerdes">b) Hogyan változik a megoldás, ha a két
+                    tábor közül megelégszem ha csak az egyikbe megy?</div>
+                
+                <!--download codes-->
+                <div class="card">
+                    <div class="card-header">
+                        <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                        Forráskódok letöltése</button>
+                    </div>
+                
+                    <div id="downloadableCodes" class="collapse show">
+                    <div class="card-body">
+                        <mat-selection-list id="DownloadCodes">
+                            <mat-list-item (click)="downloadRcode11()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadLingocode11()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item (click)="downloadSascode11()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                        </mat-selection-list>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+
     </div>

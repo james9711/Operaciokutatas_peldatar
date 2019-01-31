@@ -100,7 +100,7 @@
     margin-bottom: 40px;
 }
 
-.leiras, li{
+.leiras, li, .kerdes{
   text-align: justify;
   text-indent: 20px;
   position: relative;
@@ -110,6 +110,13 @@
   margin-bottom: 5px;
   line-height: 150%;
   overflow: hidden;
+}
+
+.kerdes {
+  color:rgb(160, 47, 47);
+  font-weight: bold;
+  margin-top: 20px; 
+  margin-bottom: 20px;
 }
 
 li{
@@ -198,7 +205,13 @@ h5 {
 }
 
 .card {
+  margin-bottom: 50px;
   background-clip: border-box;
   border: 1px solid rgb(0, 0, 0, 0.125);
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.897);
+}
+
+.card:hover{
+  transform: scale(1.02);
+  transition: all 1s ease-in-out;
 }
