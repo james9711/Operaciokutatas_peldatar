@@ -26,4 +26,5 @@ export class Chapter1Component implements OnInit {
     console.log("no file found");
     //window.open("");
   }
+
 }
