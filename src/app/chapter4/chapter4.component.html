@@ -25,7 +25,115 @@
         <h4 class="alfejezetcim"> 4.2 Kidolgozott példa: </h4>
 
         <div class="paperUp">
+            <h5>2.1. Elméleti levezetés, kidolgozás ??</h5>
+            <h5>2.2. IBM CPLEX - Példa kód</h5>
+            <textarea highlight-js [options]="{}" [lang]="">
+            >
 
+            </textarea>
+            <h5>2.3. Lingo - Példa kód</h5>
+            <textarea highlight-js [options]="{}" [lang]="">
+            >
+
+            </textarea>
+            <h5>2.4. R - Példa kód</h5>
+            <textarea highlight-js [options]="{}" [lang]="">
+                >
+                #∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗
+                # Operácio´kutatás szoftveres példatár 
+                # 
+                # 4 . fejezet 1 . feladat 
+                # 
+                # RailCargo Hungaria . 
+                # 
+                #∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗
+            
+                library ( lpSolveAPI )
+                #12 darab do¨ntési va´ltozó van .
+                lpmodel <− make. lp (0 ,12) 
+            
+                #állítsuk be minimalizációra a modellt .
+                lp . control ( lpmodel , sense = ’min ’ )
+                #Konfigura´ljuk a célfüggvény va´ltozók együtthatóit .
+                set . objfn ( lpmodel , 20 c(10000 ,21000 ,17000 ,13000 ,20000 ,11000 ,16000 ,24000 ,13000 ,15000 ,21000 ,30000) )
+            
+                #Adjuk meg a feltételeket . 
+                #Gabonasza´llítók száma 
+                #Záhony
+                add . constraint ( lpmodel , c(1 ,1 ,1 ,1 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0) , type = ”<=” , 10) 
+                #Békéscsaba
+                add . constraint ( lpmodel , c(0 ,0 ,0 ,0 ,1 ,1 ,1 ,1 ,0 ,0 ,0 ,0) , type = ”<=” , 11) 
+                #Szeged
+                add . constraint ( lpmodel , c(0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,1 ,1 ,1 ,1) , type = ”<=” , 19)
+                #Az üzemek igénye 
+                #Székesfehérvár
+                add . constraint ( lpmodel , c(1 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,1 ,0 ,0 ,0) , type = ”>=” , 11) 
+                #Kaposvár
+                add . constraint ( lpmodel , c(0 ,1 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,1 ,0 ,0) , type = ”>=” , 6) 
+                #Nagykanizsa
+                add . constraint ( lpmodel , c(0 ,0 ,1 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,1 ,0) , type = ”>=” , 14) 
+                #Győr
+                add . constraint ( lpmodel , c(0 ,0 ,0 ,1 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,1) , type = ”>=” , 9)
+            
+                #A f e lé pí t e t t modell megoldása .
+                solve ( lpmodel )
+            
+                #Célfüggvény értékének lekérése
+                get . objective ( lpmodel ) 
+                #585000 lesz a s z á l lí t á s i terv költsége .
+            
+                #Az optimális megoldást adó változók értékének megjelenítés
+                solution <− matrix ( get . variables ( lpmodel ) ,nrow = 3 ,byrow = TRUE) 
+                dimnames( solution ) <− l i s t (c(”Za´hony” ,”Békéscsaba” ,”Szeged”) , 
+                    c(”Székesfehérva´r” ,”Kaposva´r” ,”Nagykanizsa” ,”Győr”) )
+            
+                solution 
+                #               Székesfehérvár       Kaposvár     Nagykanizsa        Győr
+                #Záhony               0                   0               1               9 
+                #Békéscsaba           0                   0               11              0 
+                #Szeged               11                  6               2               0
+            
+                #∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗
+                # Debreceni Egyetem , Informatikai Kar 2016
+                #∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗
+            </textarea>
+            <h5>2.5. SAS/OR - Példa kód</h5>
+            <textarea highlight-js [options]="{}" [lang]="">
+                >
+                /∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗ 
+                Opera´ciókutatás szoftveres példatár
+
+                4 . fejezet 1 . feladat − RailCargo Hungaria
+                ∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗/
+
+                proc optmodel ; 
+                    set <str> TELEPHELY = /ZAH, BEK, SZE/; 
+                    set <str> UZEM = /SZEKESF, KAPOSVAR, NAGYKA, GYOR/; 
+                    set UTAK = {TELEPHELY, UZEM}; 
+                    num kap{TELEPHELY} = [ 10 , 11 , 19 ] ; 
+                    num igeny{UZEM} = [ 11 ,6 ,14 ,9 ] ; 
+                    num ktg{UTAK} = [ 10000 ,21000 ,17000 ,13000 , 
+                                        20000 ,11000 ,16000 ,24000 , 
+                                        13000 ,15000 ,21000 ,30000 ] ; 
+                    var x{UTAK} >= 0 ; 
+                    
+                    min obj = sum{i in TELEPHELY, j in UZEM} ktg [ i , j ] ∗ x [ i , j ] ; 
+                    
+                    con KapFelt{i in TELEPHELY}: sum{j in UZEM} x [ i , j ] <= kap [ i ] ; 
+                    con IgenyFelt{j in UZEM}: sum{i in TELEPHELY} x [ i , j ] >= igeny [ j ] ; 
+                    
+                    solve ;
+                    
+                    print x ;
+
+                quit ;
+
+                /∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗
+                Debreceni Egyetem , Informatikai Kar 2016
+                ∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗∗/
+            </textarea>
+            <img src="../../assets/sources/pictures/4fejezet_1tabla.png" style="height: 60%; width: 60%;" class="diagram">
+            <div class="leiras" style="text-align: center">IV.1. ábra. Eredmény</div>
         </div>
 
     </div>
@@ -34,6 +142,987 @@
         <h4 class="alfejezetcim"> 4.3 Feladatok: </h4>
 
         <div class="paperUp">
+
+            <!--feladat1-->
+            <div class="card">
+                <div class="card-header">
+                    1.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">Négy gabonafeldolgozó üzem gabonaszállító teherkocsikat rendel a RailCargo Hungaria vasúttársaságtól. A vasúttársaságnak Záhonyban 10, Szegeden 19 és Békéscsabán pedig 11 darab teherkocsija áll rendelkezésre. A feldolgozó üzemek igényei a következők: Székesfehérvárinak 11, Kaposvárinak 6, Nagykanizsainak 14, Győrinek 9 gabonaszállítóra van szüksége. A telephelyekről az üzemekbe való szállítás költségei a következők:</div>
+                    <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                        <tr>
+                            <th style="border-left: none; border-top: none;"></th>
+                            <th style="border-right: none; border-top: none;">Székesfehérvár</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Kaposvár</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Nagykanizsa</th>
+                            <th style="border-left: none; border-top: none;">Győr</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Kocsik száma</th>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Záhony</td>
+                            <td style="border-right: none; border-left: none;">10000</td>
+                            <td style="border-right: none; border-left: none;">21000</td>
+                            <td style="border-right: none; border-left: none;">17000</td>
+                            <td style="border-left: none;">13000</td>
+                            <td style="border-right: none">10</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Békéscsaba</td>
+                            <td style="border-right: none; border-left: none;">20000</td>
+                            <td style="border-right: none; border-left: none;">11000</td>
+                            <td style="border-right: none; border-left: none;">16000</td>
+                            <td style="border-right: none; border-left: none;">24000</td>
+                            <td style="border-right: none">11</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Szeged</td>
+                            <td style="border-right: none; border-left: none;">13000</td>
+                            <td style="border-right: none; border-left: none;">15000</td>
+                            <td style="border-right: none; border-left: none;">21000</td>
+                            <td style="border-right: none; border-left: none;">30000</td>
+                            <td style="border-right: none">19</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none; border-bottom: none;">Igény</td>
+                            <td style="border-right: none; border-bottom: none;">11</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">6</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">14</td>
+                            <td style="border-left: none; border-bottom: none;">9</td>
+                        </tr>
+                    </table>
+                    <div class="kerdes">Határozza meg a legkisebb költségu˝ szállítási tervet!</div>
+                    
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_1()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_1()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_1()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <!--feladat2-->
+            <div class="card">
+                <div class="card-header">
+                    2.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">Egy befektető 15 millió forintot szeretne befektetni és úgy határoz, hogy 7 milliót részvénybe, 5 milliót kötvénybe és 3 milliót lekötött betétbe fog elhelyezni. 6 társaságnál van lehetősége befektetni a pénzét: 
+                        az elsőnél maximálisan 4 milliót, a másodiknál 3 milliót, az összes többinél csak 2 milliót helyezhet el. A következő táblázat azt mutatja- az alapok szerint-, hogy mekkora hozamot érhet el, ha az egyes társaságoknál helyezi el a pénzét.</div>
+                <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                    <tr>
+                        <th style="border-left: none; border-top: none;"></th>
+                        <th style="border-right: none; border-top: none;">A</th>
+                        <th style="border-right: none; border-left: none; border-top: none;">B</th>
+                        <th style="border-right: none; border-left: none; border-top: none;">C</th>
+                        <th style="border-right: none; border-left: none; border-top: none;">D</th>
+                        <th style="border-right: none; border-left: none; border-top: none;">E</th>
+                        <th style="border-left: none; border-top: none;">F</th>
+                        <th style="border-right: none; border-left: none; border-top: none;">Keret</th>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none;">Részvény</td>
+                        <td style="border-right: none; border-left: none;">12</td>
+                        <td style="border-right: none; border-left: none;">10</td>
+                        <td style="border-right: none; border-left: none;">15</td>
+                        <td style="border-right: none; border-left: none;">13</td>
+                        <td style="border-right: none; border-left: none;">16</td>
+                        <td style="border-left: none;">14</td>
+                        <td style="border-right: none">7M</td>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none;">Kötvény</td>
+                        <td style="border-right: none; border-left: none;">8.1</td>
+                        <td style="border-right: none; border-left: none;">7.6</td>
+                        <td style="border-right: none; border-left: none;">7.3</td>
+                        <td style="border-right: none; border-left: none;">7.8</td>
+                        <td style="border-right: none; border-left: none;">7.4</td>
+                        <td style="border-left: none;">8</td>
+                        <td style="border-right: none">5M</td>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none;">Betét</td>
+                        <td style="border-right: none; border-left: none;">5.7</td>
+                        <td style="border-right: none; border-left: none;">6.1</td>
+                        <td style="border-right: none; border-left: none;">4.9</td>
+                        <td style="border-right: none; border-left: none;">5.4</td>
+                        <td style="border-right: none; border-left: none;">4.5</td>
+                        <td style="border-left: none;">5.3</td>
+                        <td style="border-right: none">3M</td>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none; border-bottom: none;">Maximálisan elhelyezhető összeg</td>
+                        <td style="border-right: none; border-left: none; border-bottom: none;">4M</td>
+                        <td style="border-right: none; border-left: none; border-bottom: none;">3M</td>
+                        <td style="border-right: none; border-left: none; border-bottom: none;">2M</td>
+                        <td style="border-right: none; border-left: none; border-bottom: none;">2M</td>
+                        <td style="border-right: none; border-left: none; border-bottom: none;">2M</td>
+                        <td style="border-left: none; border-bottom: none;">2M</td>
+                    </tr>
+                </table>
+                <div class="kerdes">Hogyan kellene befektetnie a pénzét, hogy maximális legyen a várható hozam?</div>
+                    
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_2()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_2()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_2()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <!--feladat3-->
+            <div class="card">
+                <div class="card-header">
+                    3.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">Egy társaság 3 konzervgyárral rendelkezik, melyekből a kész termék szállítása 5 nagy áruházba történik. Az áruházak jelezték, hogy havonta mennyi konzervre van szükségük: Tesco 300, Auchan 400, Spar 350, Coop 250, CBA 100. Az első konzervgyárban 500, a másodikban 540, a harmadikban 360 db konzervet állítanak elő havonta. A szállítás költségei konzervenként a következők:</div>
+                    <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                        <tr>
+                            <th style="border-left: none; border-top: none;">Gyár</th>
+                            <th style="border-right: none; border-top: none;">Tesco</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Auchan</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Spar</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Coop</th>
+                            <th style="border-left: none; border-top: none;">CBA</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Kapacitás</th>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">K1</td>
+                            <td style="border-right: none; border-left: none;">1.2</td>
+                            <td style="border-right: none; border-left: none;">1.3</td>
+                            <td style="border-right: none; border-left: none;">1.5</td>
+                            <td style="border-right: none; border-left: none;">1.1</td>
+                            <td style="border-left: none;">1.7</td>
+                            <td style="border-right: none">500</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">K2</td>
+                            <td style="border-right: none; border-left: none;">1.7</td>
+                            <td style="border-right: none; border-left: none;">2.1</td>
+                            <td style="border-right: none; border-left: none;">1.8</td>
+                            <td style="border-right: none; border-left: none;">1.3</td>
+                            <td style="border-left: none;">1.4</td>
+                            <td style="border-right: none">540</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">K3</td>
+                            <td style="border-right: none; border-left: none;">1.6</td>
+                            <td style="border-right: none; border-left: none;">1.6</td>
+                            <td style="border-right: none; border-left: none;">1.7</td>
+                            <td style="border-right: none; border-left: none;">1.8</td>
+                            <td style="border-left: none;">1.8</td>
+                            <td style="border-right: none">360</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none; border-bottom: none;">Igény</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">300</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">400</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">350</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">250</td>
+                            <td style="border-left: none; border-bottom: none;">100</td>
+                        </tr>
+                    </table>
+                    <div class="kerdes">Készítsük el a minimális szállítási költséggel járó megoldását a feladatnak!</div>
+                    
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_3()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_3()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_3()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <!--feladat4-->
+            <div class="card">
+                <div class="card-header">
+                    4.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">A Debreceni önkormányzat úgy dönt, hogy szeretné a város határában levő 2 darab 100 hektáros és 1 darab 80 hektáros földterületeit elárverezni. A földterületekre öt gazdálkodó licitál, a területek értéke 1000 Ft/hektár. A következő táblázat tartalmazza a licitálásokat a különböző földterületek szerint:</div>
+                    <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                        <tr>
+                            <th style="border-left: none; border-top: none;">Vevő</th>
+                            <th style="border-right: none; border-top: none;">1.föld</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">2. föld</th>
+                            <th style="border-left: none; border-top: none;">3. föld</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Limit</th>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">István</td>
+                            <td style="border-right: none; border-left: none;">102</td>
+                            <td style="border-right: none; border-left: none;">120</td>
+                            <td style="border-left: none;">130</td>
+                            <td style="border-right: none">70</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Béla</td>
+                            <td style="border-right: none; border-left: none;">105</td>
+                            <td style="border-right: none; border-left: none;">137</td>
+                            <td style="border-left: none;">125</td>
+                            <td style="border-right: none">70</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Pál</td>
+                            <td style="border-right: none; border-left: none;">114</td>
+                            <td style="border-right: none; border-left: none;">131</td>
+                            <td style="border-left: none;">121</td>
+                            <td style="border-right: none">70</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Attila</td>
+                            <td style="border-right: none; border-left: none;">108</td>
+                            <td style="border-right: none; border-left: none;">123</td>
+                            <td style="border-left: none;">113</td>
+                            <td style="border-right: none">70</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Imre</td>
+                            <td style="border-right: none; border-left: none;">106</td>
+                            <td style="border-right: none; border-left: none;">129</td>
+                            <td style="border-left: none;">121</td>
+                            <td style="border-right: none">70</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none; border-bottom: none;">Össz. terület</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">100</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">100</td>
+                            <td style="border-left: none; border-bottom: none;">80</td>
+                        </tr>
+                    </table>
+                    <div class="leiras">Az önkormányzat nem szeretné, hogy egy gazdálkodó 70 hektárnál több földet szerezzen. </div>
+                    <div class="kerdes">Ezek alapján hogyan kellene eladnia a földeket az önkormányzatnak, hogy maximalizálni tudja a bevételét?</div>
+                    
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_4()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_4()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_4()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <!--feladat5-->
+            <div class="card">
+                <div class="card-header">
+                    5.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">Egy bank tulajdonában 3 iroda van, amelyek csekkek feldolgozásával foglalkoznak. Három fajta csekk kerül feldolgozásra: eladói, ﬁzetési és személyi csekk. A bankba minden nap 3200 darab csekk érkezik, amelyből 1200 darab ﬁzetési, 1000-1000 pedig a eladói és személyi csekk. Vasárnap a bank zárva tart, így azon a napon nem történik ügyintézés. Az első irodában 8500 csekket, a másodikban 6100 csekket, a harmadiknál 4600 csekket tudnak feldolgozni minden héten. A csekkek feldolgozásának költségei helyszíntől függően változnak az alábbiak alapján:</div>
+                    <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                        <tr>
+                            <th style="border-left: none; border-top: none;">Csekk</th>
+                            <th style="border-right: none; border-top: none;">1.iroda</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">2. iroda</th>
+                            <th style="border-left: none; border-top: none;">3. iroda</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Összesen</th>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Eladói</td>
+                            <td style="border-right: none; border-left: none;">100</td>
+                            <td style="border-right: none; border-left: none;">120</td>
+                            <td style="border-left: none;">110</td>
+                            <td style="border-right: none">1200</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Fizetési</td>
+                            <td style="border-right: none; border-left: none;">90</td>
+                            <td style="border-right: none; border-left: none;">95</td>
+                            <td style="border-left: none;">80</td>
+                            <td style="border-right: none">1000</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Személyi</td>
+                            <td style="border-right: none; border-left: none;">100</td>
+                            <td style="border-right: none; border-left: none;">90</td>
+                            <td style="border-left: none;">85</td>
+                            <td style="border-right: none">1000</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none; border-bottom: none;">Kapacitás</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">8500</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">6100</td>
+                            <td style="border-left: none; border-bottom: none;">4600</td>
+                        </tr>
+                    </table>
+                    <div class="leiras">A bank szeretné úgy megtervezni a csekkek feldolgozását, hogy közben minimalizálja a költségeket. </div>
+                    <div class="kerdes">Határozza meg a feldolgozási tervet!</div>
+                    
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_5()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_5()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_5()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <!--feladat6-->
+            <div class="card">
+                <div class="card-header">
+                    6.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">Miskolcon és Salgótarjánban fakitermelés folyik és a faanyagot helyben fel is dolgozzák. Miskolcon heti 1400 m<sup>3</sup>, Salgótarjánban 600 m<sup>3</sup> faanyagot állítanak elő. A feldolgozott anyag elszállítása 2 városba történik, Szegedre és Békéscsabára. A megrendelő városok igényei a következők: Békéscsabának 900 m<sup>3</sup>, Szegednek 1100 m<sup>3</sup> feldolgozott faanyag. A szállítás a célállomásra vonattal is történhet, de amíg az árut fel nem pakolják a tehervagonra, addig Kecskeméten és Szolnokon lehetőség van a fa tárolására. A következő táblázat a szállítási költségeket mutatja: (sor-honnan,oszlop-hová)</div>
+                    <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                        <tr>
+                            <th style="border-left: none; border-top: none;"></th>
+                            <th style="border-right: none; border-top: none;">Szeged</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Békéscsaba</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Kecskemét</th>
+                            <th style="border-left: none; border-top: none;">Szolnok</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Kapacitás</th>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Miskolc</td>
+                            <td style="border-right: none; border-left: none;">56</td>
+                            <td style="border-right: none; border-left: none;">62</td>
+                            <td style="border-right: none; border-left: none;">24</td>
+                            <td style="border-left: none;">27</td>
+                            <td style="border-right: none">1400 m<sup>3</sup></td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Salgótarján</td>
+                            <td style="border-right: none; border-left: none;">73</td>
+                            <td style="border-right: none; border-left: none;">69</td>
+                            <td style="border-right: none; border-left: none;">28</td>
+                            <td style="border-left: none;">30</td>
+                            <td style="border-right: none">600 m<sup>3</sup></td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Kecskemét</td>
+                            <td style="border-right: none; border-left: none;">29</td>
+                            <td style="border-right: none; border-left: none;">36</td>
+                            <td style="border-right: none; border-left: none;"></td>
+                            <td style="border-left: none;"></td>
+                            <td style="border-right: none">400 m<sup>3</sup></td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">Szolnok</td>
+                            <td style="border-right: none; border-left: none;">26</td>
+                            <td style="border-right: none; border-left: none;">44</td>
+                            <td style="border-right: none; border-left: none;"></td>
+                            <td style="border-left: none;"></td>
+                            <td style="border-right: none">600 m<sup>3</sup></td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none; border-bottom: none;">Igény</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">1100 m<sup>3</sup></td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">900 m<sup>3</sup></td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;"></td>
+                            <td style="border-left: none; border-bottom: none;"></td>
+                        </tr>
+                    </table>
+                    <div class="kerdes">Hogyan készítené el a szállítási tervet, ha Kecskeméten 400 m<sup>3</sup>, Szolnokon 600 m<sup>3</sup> tudnak átrakodni vonatra?</div>
+                    
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_6()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_6()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_6()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <!--feladat7-->
+            <div class="card">
+                <div class="card-header">
+                    7.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">A ”Wheelers” bicikligyár 4 darab gyártóüzemmel rendelkezik, melyek közül 2 Debrecenben, 2 pedig Hajdúböszörményben található. A 4 üzemből 13, 19, 25, 21, 16, 26 darab kerékpárt kell a 6 megrendelőhöz szállítani, melyek közül 4 darab Debrecenben (B1-B4), és 2 darab (B5-B6) Hajdúböszörményben található. A gyárak termelési kapacitása és a szállítási költségek a következő táblázatban találhatóak:
+                    </div>
+                <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                    <tr>
+                        <td style="border-left: none; border-right: none; border-top: none;"></td>
+                        <td style="border-left:none; border-top: none;"></td>
+                        <th style="border-right: none; border-top: none; border-left: none;">B1</th>
+                        <th style="border-right: none; border-left: none; border-top: none;">B2</th>
+                        <th style="border-right: none; border-left: none; border-top: none;">B3</th>
+                        <th style="border-right: none; border-left: none; border-top: none;">B4</th>
+                        <th style="border-right: none; border-left: none; border-top: none;">B5</th>
+                        <th style="border-left: none; border-top: none;">B6</th>
+                        <th style="border-right: none; border-left: none; border-top: none;">Kapacitás</th>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none; border-right: none; border-bottom: none;">Debrecen</td>
+                        <td style="border-left:none; border-bottom: none;">Gy1</td>
+                        <td style="border-right: none; border-left: none;">7</td>
+                        <td style="border-right: none; border-left: none;">9</td>
+                        <td style="border-right: none; border-left: none;">12</td>
+                        <td style="border-right: none; border-left: none;">10</td>
+                        <td style="border-right: none; border-left: none;">10</td>
+                        <td style="border-left: none;">9</td>
+                        <td style="border-right: none">32</td>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none; border-right: none; border-top: none;"></td>
+                        <td style="border-left:none; border-top: none;">Gy2</td>
+                        <td style="border-right: none; border-left: none;">8</td>
+                        <td style="border-right: none; border-left: none;">11</td>
+                        <td style="border-right: none; border-left: none;">10</td>
+                        <td style="border-right: none; border-left: none;">13</td>
+                        <td style="border-right: none; border-left: none;">11</td>
+                        <td style="border-left: none;">9</td>
+                        <td style="border-right: none">46</td>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none; border-right: none; border-bottom: none;">Hajdúböszörmény</td>
+                        <td style="border-left:none; border-bottom: none;">Gy3</td>
+                        <td style="border-right: none; border-left: none;">12</td>
+                        <td style="border-right: none; border-left: none;">11</td>
+                        <td style="border-right: none; border-left: none;">11</td>
+                        <td style="border-right: none; border-left: none;">9</td>
+                        <td style="border-right: none; border-left: none;">10</td>
+                        <td style="border-left: none;">7</td>
+                        <td style="border-right: none">18</td>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none; border-right: none; border-top: none;"></td>
+                        <td style="border-left:none; border-top: none;">Gy4</td>
+                        <td style="border-right: none; border-left: none;">10</td>
+                        <td style="border-right: none; border-left: none;">8</td>
+                        <td style="border-right: none; border-left: none;">9</td>
+                        <td style="border-right: none; border-left: none;">11</td>
+                        <td style="border-right: none; border-left: none;">11</td>
+                        <td style="border-left: none;">10</td>
+                        <td style="border-right: none">24</td>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none; border-bottom: none; border-right: none;">Igény</td>
+                        <td style="border-left: none; border-left: none; border-bottom: none;"></td>
+                        <td style="border-right: none; border-left: none; border-bottom: none;">13</td>
+                        <td style="border-right: none; border-left: none; border-bottom: none;">19</td>
+                        <td style="border-right: none; border-left: none; border-bottom: none;">25</td>
+                        <td style="border-right: none; border-left: none; border-bottom: none;">21</td>
+                        <td style="border-right: none; border-left: none; border-bottom: none;">16</td>
+                        <td style="border-left: none; border-bottom: none;">26</td>
+                    </tr>
+                </table>
+                <div class="kerdes">a) Hogyan tervhezhető meg, hogy ki hova szállítson, ha szeretné minimalizálni az összes szállítási költséget?</div>
+                <!--download codes-->
+                <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése (7a)</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_7a()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_7a()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_7a()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="kerdes">b) Hogyan változik ez az érték, ha a szállítás csak városon belül oldható meg, azaz a debreceni gyár csak debreceni boltba szállíthat?</div>
+                    
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése (7b)</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_7b()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_7b()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_7b()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <!--feladat8-->
+            <div class="card">
+                <div class="card-header">
+                    8.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">4 új újságárusító jelentkezett a Naplónál, hogy szeretné az újságot a boltjukban eladásra kínálni. Az egyes árusok jelezték az igényeiket, ami 150, 195, 120, 125 darab újság lenne. A Napló 3 nyomdával rendelkezik a városban, viszont ezek csak 250, 150, 190 újságot tudnak előállítani. A hírlapokat a nyomdából a boltokba a lehető legrövidebb úton szeretné eljuttatni. A táblázat az egyes helyek közötti távolságokat adja meg km-ben:</div>
+                    <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                        <tr>
+                            <th style="border-left: none; border-top: none;"></th>
+                            <th style="border-right: none; border-top: none;">B1</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">B2</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">B3</th>
+                            <th style="border-left: none; border-top: none;">B4</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Kapacitás</th>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">NY1</td>
+                            <td style="border-right: none; border-left: none;">2</td>
+                            <td style="border-right: none; border-left: none;">4</td>
+                            <td style="border-right: none; border-left: none;">2</td>
+                            <td style="border-left: none;">1</td>
+                            <td style="border-right: none">250</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">NY2</td>
+                            <td style="border-right: none; border-left: none;">3</td>
+                            <td style="border-right: none; border-left: none;">3</td>
+                            <td style="border-right: none; border-left: none;">5</td>
+                            <td style="border-left: none;">2</td>
+                            <td style="border-right: none">150</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">NY3</td>
+                            <td style="border-right: none; border-left: none;">4</td>
+                            <td style="border-right: none; border-left: none;">4</td>
+                            <td style="border-right: none; border-left: none;">1</td>
+                            <td style="border-left: none;">3</td>
+                            <td style="border-right: none">190</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none; border-bottom: none;">Igény</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">150</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">195</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">120</td>
+                            <td style="border-left: none; border-bottom: none;">125</td>
+                        </tr>
+                    </table>
+                    <div class="kerdes">a) Melyik nyomdából, hová és hány újságot kell szállítani?</div>
+                    <!--download codes-->
+                    <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése (8a)</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode4_8a()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode4_8a()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode4_8a()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="kerdes">b) A NY3 → B3 vezető úton csőtörés volt és egy hétig nem lehet használni, valamint NY2 → B4 úton aszfaltozás miatt egy hónapig nem lehet közlekedni. Ebben az esetben hogyan nézne ki a szállítási terv?</div>
+                    
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése (8b)</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_8b()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_8b()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_8b()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <!--feladat9-->
+            <div class="card">
+                <div class="card-header">
+                    9.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">Egy építkezési vállalat 3 bázissal rendelkezik, ahonnan adott építkezési területre betont tud szállítani. A következő hónapban 5 épület lesz a betonozás fázisában, melyekhez előreláthatóan 720, 340, 460, 500, 660 tonna beton kell. A beton szállítása 20 tonna kapacitású betonkeverőkkel történik, a bázisokon pedig 1040, 860, 880 tonna betont tudnak majd el?állítani. A bázisok és az építkezési helyek közötti legrövidebb út hosszát a következő táblázat mutatja:</div>
+                    <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                        <tr>
+                            <th style="border-left: none; border-top: none;"></th>
+                            <th style="border-right: none; border-top: none;">ÉH1</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">ÉH2</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">ÉH3</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">ÉH4</th>
+                            <th style="border-left: none; border-top: none;">ÉH5</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Kapacitás</th>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">B1</td>
+                            <td style="border-right: none; border-left: none;">2.3</td>
+                            <td style="border-right: none; border-left: none;">4.6</td>
+                            <td style="border-right: none; border-left: none;">1.5</td>
+                            <td style="border-right: none; border-left: none;">8.3</td>
+                            <td style="border-left: none;">4.5</td>
+                            <td style="border-right: none">52</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">B2</td>
+                            <td style="border-right: none; border-left: none;">3.5</td>
+                            <td style="border-right: none; border-left: none;">7.6</td>
+                            <td style="border-right: none; border-left: none;">4.3</td>
+                            <td style="border-right: none; border-left: none;">2.2</td>
+                            <td style="border-left: none;">4.3</td>
+                            <td style="border-right: none">43</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">B3</td>
+                            <td style="border-right: none; border-left: none;">6.5</td>
+                            <td style="border-right: none; border-left: none;">1.2</td>
+                            <td style="border-right: none; border-left: none;">6.3</td>
+                            <td style="border-right: none; border-left: none;">4.5</td>
+                            <td style="border-left: none;">5.7</td>
+                            <td style="border-right: none">44</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none; border-bottom: none;">Igény</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">36</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">17</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">23</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">25</td>
+                            <td style="border-left: none; border-bottom: none;">33</td>
+                        </tr>
+                    </table>
+                    <div class="kerdes">A szállítási költségeket sávokban határozták meg: a 2 km-nél rövidebb út 2000 Forint, 2-4 km közötti út 3500 Forint, 4-6 km 4800 Forint ás a 6 km-nél hosszabb út 7200 forint érték?.</div>
+                    <div class="kerdes">Határozza meg a szállítási tervet és mennyi lesz a szállítás minimális költsége!</div>
+
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_9()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_9()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_9()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <!--feladat10-->
+            <div class="card">
+                <div class="card-header">
+                    10.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">Egy új szállító cég 3 kistermelőtől átveszi a tejek szállítását, melyet 4 boltba kell eljuttatni. Az első termelőnél 10 tehén van, melyek egyenként 3.5 liter tejet adnak, a második termelőnél 20 tehén egyenként 4 liter tejet ad. A harmadik termelőnek csak 5 tehene van, amelyek összesen 20 liter tejet adnak. A boltok igényei a következők: 32,24,43,36 liter.</div>
+                    <div class="leiras">A következő táblázat tartalmazza az utak költségét:</div>
+                    <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                        <tr>
+                            <th style="border-left: none; border-top: none;"></th>
+                            <th style="border-right: none; border-top: none;">B1</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">B2</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">B3</th>
+                            <th style="border-left: none; border-top: none;">B4</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Kapacitás</th>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">T1</td>
+                            <td style="border-right: none; border-left: none;">7</td>
+                            <td style="border-right: none; border-left: none;">3</td>
+                            <td style="border-right: none; border-left: none;">4</td>
+                            <td style="border-left: none;">4</td>
+                            <td style="border-right: none">35</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">T2</td>
+                            <td style="border-right: none; border-left: none;">2</td>
+                            <td style="border-right: none; border-left: none;">4</td>
+                            <td style="border-right: none; border-left: none;">6</td>
+                            <td style="border-left: none;">5</td>
+                            <td style="border-right: none">80</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">T3</td>
+                            <td style="border-right: none; border-left: none;">4</td>
+                            <td style="border-right: none; border-left: none;">5</td>
+                            <td style="border-right: none; border-left: none;">3</td>
+                            <td style="border-left: none;">3</td>
+                            <td style="border-right: none">20</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none; border-bottom: none;">Igény</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">32</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">24</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">43</td>
+                            <td style="border-left: none; border-bottom: none;">36</td>
+                        </tr>
+                    </table>
+                    <div class="kerdes">Az első bolt szólt önnek, hogy nem kérnek tejet a második termelőtől, mert korábban többször is romlott árut kaptak tőlük.</div>
+                    <div class="kerdes">Ezek alapján mennyi lesz a minimális költség, ha minden igényt ki akarunk elégíteni? </div>
+                    <div class="kerdes">Készítse el a szállítási tervet?</div>
+                    
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_10()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_10()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_10()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <!--feladat11-->
+            <div class="card">
+                <div class="card-header">
+                    11.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">A PcX Kft. számítógép-szereléssel és értékesítéssel foglakozik. Az előző hónapban 4 fogyasztó megrendelt 30, 26, 25, 24 darab laptopot, azonban a rendelést felvevő kolléga valamit elrontott és emiatt csak 85 laptopot gyártottak. A kész termékek közül 35 darab az első, 50 darab a második raktárban van. A cégek jelezték, hogy ha nem kapják meg a laptopokat, akkor kártérítést követelnek. ´Igy minden egyes ki nem elégített követelés után büntetést kell ﬁzetni. Ezek 100, 130, 105, 120 euró kártérítési összegeket jelentenek. A többi laptopot viszont le kell szállítani. A fogyasztókhoz vezető szállítás költségei a következők:</div>
+                    <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                        <tr>
+                            <th style="border-left: none; border-top: none;"></th>
+                            <th style="border-right: none; border-top: none;">F1</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">F2</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">F3</th>
+                            <th style="border-left: none; border-top: none;">F4</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Kapacitás</th>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">R1</td>
+                            <td style="border-right: none; border-left: none;">7</td>
+                            <td style="border-right: none; border-left: none;">8</td>
+                            <td style="border-right: none; border-left: none;">5</td>
+                            <td style="border-left: none;">6</td>
+                            <td style="border-right: none">35</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">R2</td>
+                            <td style="border-right: none; border-left: none;">9</td>
+                            <td style="border-right: none; border-left: none;">7</td>
+                            <td style="border-right: none; border-left: none;">7</td>
+                            <td style="border-left: none;">8</td>
+                            <td style="border-right: none">80</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none; border-bottom: none;">Igény</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">32</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">24</td>
+                            <td style="border-right: none; border-left: none; border-bottom: none;">43</td>
+                            <td style="border-left: none; border-bottom: none;">36</td>
+                        </tr>
+                    </table>
+                    <div class="kerdes">Hogyan alakítaná ki a minimális költségü szállítási tervet, ha a büntetéseket is ﬁgyelembe veszi a költségek minimalizálása során?</div>
+                    <div class="kerdes">Ki vagy kik lesznek azok, akik nem fognak minden laptopot megkapni</div>
+                    
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_11()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_11()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_11()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <!--feladat12-->
+            <div class="card">
+                <div class="card-header">
+                    12.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">A Furniture két gyárában irodai székeket állítanak elő és mindkét üzem 240 darabot tud legyártani. Ezeket a székeket 3 raktár közül előbb az egyikbe elszállítják, majd onnan az 5 áruházuk valamelyikébe kerülnek értékesítésre, melyek igényei: 80, 104, 128, 64, 64 darab szék. Az első és a második raktárban csak 100-100 széket tudunk tárolni, a harmadikban bármennyit. A székek raktárban való tárolásának költsége: az első raktárban 50, a másodikban 45, a harmadikban 60 ft/szék. A szállítási költségeket a különböző helyek között a következő táblázat mutatja:</div>
+                    <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                        <tr>
+                            <th style="border-left: none; border-top: none;"></th>
+                            <th style="border-right: none; border-top: none;">1.raktár</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">2.raktár</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">3.raktár</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">1.áruház</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">2.áruház</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">3.áruház</th>
+                            <th style="border-left: none; border-top: none;">4.áruház</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">5.áruház</th>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">1.gyár</td>
+                            <td style="border-right: none; border-left: none;">40</td>
+                            <td style="border-right: none; border-left: none;">50</td>
+                            <td style="border-right: none; border-left: none;">55</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-left: none;">0</td>
+                            <td style="border-right: none">0</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">2.gyár</td>
+                            <td style="border-right: none; border-left: none;">45</td>
+                            <td style="border-right: none; border-left: none;">45</td>
+                            <td style="border-right: none; border-left: none;">60</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-left: none;">0</td>
+                            <td style="border-right: none">0</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">1.raktár</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">72</td>
+                            <td style="border-right: none; border-left: none;">78</td>
+                            <td style="border-right: none; border-left: none;">82</td>
+                            <td style="border-left: none;">91</td>
+                            <td style="border-right: none">60</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">2.raktár</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">81</td>
+                            <td style="border-right: none; border-left: none;">80</td>
+                            <td style="border-right: none; border-left: none;">76</td>
+                            <td style="border-left: none;">92</td>
+                            <td style="border-right: none">72</td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: none;">3.raktár</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">0</td>
+                            <td style="border-right: none; border-left: none;">74</td>
+                            <td style="border-right: none; border-left: none;">81</td>
+                            <td style="border-right: none; border-left: none;">78</td>
+                            <td style="border-left: none;">94</td>
+                            <td style="border-right: none">83</td>
+                        </tr>
+                    </table>
+                    <div class="kerdes">Egy széket előbb raktárba kell szállítani és csak azután az áruházba.</div>
+                    <div class="kerdes">Hova és mennyi széket szállítson a gyártó, ha minimalizálni akarja a költségeket?</div>          
+                    
+                    <!--download codes-->
+                    <div class="card">
+                        <div class="card-header">
+                            <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                            Forráskódok letöltése</button>
+                        </div>
+                    
+                        <div id="downloadableCodes" class="collapse show">
+                        <div class="card-body">
+                            <mat-selection-list id="DownloadCodes">
+                                <mat-list-item (click)="downloadRcode4_12()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadLingocode4_12()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                <mat-divider></mat-divider>
+                                <mat-list-item (click)="downloadSascode4_12()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                            </mat-selection-list>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
 
         </div>
 
