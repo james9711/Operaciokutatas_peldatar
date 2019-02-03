@@ -126,6 +126,11 @@ export class Chapter1Component implements OnInit {
   }
 
   //SAS/ OR codes
+  downloadSascode(){
+    console.log("no file found");
+    //window.open("");
+  }
+
   downloadSascode2(){
     window.open("../../assets/sources/files/kodok/sas or/1 fejezet feladatai/G.2.sas");
     console.log("file successfully downloaded");
