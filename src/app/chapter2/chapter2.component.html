@@ -14,13 +14,1044 @@
         <!--2.1 content-->
         <div class="tab-pane fade show active" id="elso2" role="tabpanel" aria-labelledby="elso2-tab">
             <h4 class="alfejezetcim"> 2.1 Elméleti bevezető: </h4>
+            
+            <div class="paperUp">
+
+            </div>
+
         </div>
         <!--2.2 content-->
         <div class="tab-pane fade" id="masodik2" role="tabpanel" aria-labelledby="masodik2-tab">
             <h4 class="alfejezetcim"> 2.2 Kidolgozott példa: </h4>
+
+            <div class="paperUp">
+                <h5>2.1. Elméleti levezetés, kidolgozás ??</h5>
+                <h5>2.2. IBM CPLEX - Példa kód</h5>
+                    <textarea highlight-js [options]="{}" [lang]="">
+                    >
+
+                    </textarea>
+                <h5>2.3. Lingo - Példa kód</h5>
+                    <textarea highlight-js [options]="{}" [lang]="">
+                    >
+
+                    </textarea>
+                <h5>2.4. R - Példa kód</h5>
+                    <textarea highlight-js [options]="{}" [lang]="">
+                    >
+
+                    </textarea>
+                <h5>2.5. SAS/OR - Példa kód</h5>
+                    <textarea highlight-js [options]="{}" [lang]="">
+                    >
+
+                    </textarea>
+            </div>
+
         </div>
         <!--2.3 content-->
         <div class="tab-pane fade" id="harmadik2" role="tabpanel" aria-labelledby="harmadik2-tab">
             <h4 class="alfejezetcim"> 2.3 Feladatok: </h4>
+            
+            <div class="paperUp">
+
+                <!--feladat1-->
+                <div class="card">
+                    <div class="card-header">
+                        1.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy vállalatnak 2 bányája van, ahol három fajta homokot bányásznak: durva, normál és ﬁnom szemű homokot. A vállalatnak hetente 20 tonna ﬁnom, 9 tonna normál és 15 tonna durva szemű homokot kell előállítania. A bányák kitermelési jellemzői a következők (tonna/nap):</div>
+                        <table align="center">
+                            <tr>
+                                <th>Bányák</th>
+                                <th>Durva</th>
+                                <th>Normál</th>
+                                <th>Finom</th>
+                            </tr>
+                            <tr>
+                                <td>1. bánya</td>
+                                <td>3</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>2. bánya</td>
+                                <td>7</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+                        <div class="leiras">Az első bánya kitermelési költsége 130e forint, a másodiké 160e forint. Egy nap csak az egyik területen folyhat a kitermelés.</div>
+                        <div class="kerdes">a) Hány napot bányásszanak az egyes helyeken, ha minimalizálni akarják a kitermelési költségeket?</div>
+                        <div class="kerdes">b) Egy héten hány napot fognak bányászni ebben az esetben?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_1()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_1()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_1()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                
+                <!--feladat2-->
+                <div class="card">
+                    <div class="card-header">
+                        2.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Piroska néni 50 darab tyúkot tart a kertjében, amiket különböző takarmányok keverékével szeretne etetni, hogy jó minőségű tojást kapjon. Egy tyúk napi minimális takarmányszükséglete a következő: kukorica 80g, búza 20g, zab 15g, árpa 25g. A helyi takarmányostól kétfajta takarmánycsomagot tud venni, amelyeket 1 kg-os kiszerelésben árul. Az egyik ára 1500Ft, a másiké 1800Ft.</div>
+                        <table align="center">
+                            <tr>
+                                <th>Takarmányok</th>
+                                <th>Kukorica</th>
+                                <th>Búza</th>
+                                <th>Zab</th>
+                                <th>Árpa</th>
+                            </tr>
+                            <tr>
+                                <td>1. takarmány</td>
+                                <td>600g</td>
+                                <td>170g</td>
+                                <td>180g</td>
+                                <td>50g</td>
+                            </tr>
+                            <tr>
+                                <td>2. takarmány</td>
+                                <td>700g</td>
+                                <td>60g</td>
+                                <td>60g</td>
+                                <td>180g</td>
+                            </tr>
+                        </table>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_2()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_2()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_2()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat3-->
+                <div class="card">
+                    <div class="card-header">
+                        3.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy játékgyár háromfajta macit gyárt és mindegyik előállításához textíliára és pamutra van szükség. Az első maci elkészítéséhez 0.5 m<sup>2</sup> textília és 100g pamut szükséges, a másodikhoz 0.9 m<sup>2</sup> és 200g, míg a harmadik maci esetében 0.6 m<sup>2</sup> és 350g anyagot kell felhasználni. Az első macit 30 perc, a másodikat 15 perc, a harmadikat 25 perc alatt tudják elkészíteni. A játékgyár 70 m<sup>2</sup>-nyi textíliával és 20kg pamuttal rendelkezik és mivel más játékokat is gyárt, ezért csak heti 35 órát tudnak a macik gyártására fordítani. Az első macin 300 ft, a másodikon 450 ft, a harmadikon 500 ft tiszta haszna van a cégnek.</div>
+                        <div class="kerdes">Mennyit gyártson a játékgyár az egyes macikból, hogy maximalizálja a bevételt?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_3()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_3()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_3()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat4-->
+                <div class="card">
+                    <div class="card-header">
+                        4.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy szeszfőzde három különböző whisky gyártásával foglalkozik, melyhez három alapanyag áll rendelkezésre: 1.5 tonna kukorica, 3 tonna búza és 2 tonna árpa. A cégnek 1 darab lepárló üstje van, amellyel évente csak 1500 liter whiskyt tudnak előállítani.</div>
+                        <li class="leiras">A skót whiskyhez literenként 100 gramm kukorica, 100 gramm búza és 140 gramm árpa kell, így 30 fokos whisky készül.</li>
+                        <li class="leiras">Az ír whiskyhez literenként 300 gramm kukorica, 100 gramm búza és 80 gramm árpa kell. Ez a termék így 40 fokos lesz.</li>
+                        <li class="leiras" style="margin-bottom: 20px;">Az amerikaihoz 130 gramm kukorica, 500 gramm búza és 160 gramm árpa kell literenként, ami 37 fokos lesz.</li>
+                        <div class="leiras">A főzde szeretne 500 liter whiskyt lepárolni, amely minimum 35 fokos. A szeszfőzde haszna literenként az egyes whiskey-ken: a skóton 300ft, az íren 700, az amerikain 480 forint.</div>
+                        <div class="kerdes">Melyik whiskyből hány litert állítson elő a főzde?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_4()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_4()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_4()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat5-->
+                <div class="card">
+                    <div class="card-header">
+                        5.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy új autógyár 3 fajta kocsit szeretne piacra dobni: egy hatchback-et, egy sedant és egy kombit. A gyártósoron 2 gép felel az autók összeszereléséért. A következő táblázat az egyes gépek munkaidejét mutatja:</div>
+                        <table align="center">
+                            <tr>
+                                <th>Típus</th>
+                                <th>1.gép</th>
+                                <th>2.gép</th>
+                            </tr>
+                            <tr>
+                                <td>Hatchback</td>
+                                <td>100</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>Sedan</td>
+                                <td>60</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>Kombi</td>
+                                <td>75</td>
+                                <td>55</td>
+                            </tr>
+                        </table>
+                        <div class="leiras">Mindkét gépet heti 40 órában lehet használni, de a kocsik gyártásához acélt (tonnában), bőrt (m<sup>2</sup>-ben) és műanyagot (kg-ban) is felhasználnak. Egy kocsi esetén a szükségletek a következők:</div>
+                        <table align="center">
+                            <tr>
+                                <th>Típus</th>
+                                <th>Acél</th>
+                                <th>Bőr</th>
+                                <th>Műanyag</th>
+                            </tr>
+                            <tr>
+                                <td>Hatchback</td>
+                                <td>1.4</td>
+                                <td>50</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>Sedan</td>
+                                <td>2.3</td>
+                                <td>35</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>Sedan</td>
+                                <td>2.5</td>
+                                <td>40</td>
+                                <td>35</td>
+                            </tr>
+                        </table>
+                        <div class="leiras">A gyárban hetente 50 tonna acél, 1600 m<sup>2</sup> bőr és 2 tonna műanyag áll rendelkezésre és a kocsikat a szalonoknak 2.1 millió (hatchback), 2.6 millió (sedan), 3 millió (kombi) forintos áron adják tovább.</div>
+                        <div class="kerdes">Hogyan tervezze meg a gyár, hogy melyik kocsifajtából mennyit gyártson, ha maximalizálni akarja az árbevételét?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_5()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_5()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_5()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat6-->
+                <div class="card">
+                    <div class="card-header">
+                        6.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy iskola a következő tanévben szeretné növelni a tanárok létszámát és az alábbi tantárgyakból van szükség új kollégákra: Fizika, Földrajz, Kémia, Testnevelés, Magyar, Angol. A következő táblázat mutatja a leendő jelöltek képesítését és ﬁzetési igényeit:</div>
+                        <table align="center">
+                            <tr>
+                                <th>Név</th>
+                                <th>Fizetés</th>
+                                <th>Képesítés</th>
+                            </tr>
+                            <tr>
+                                <td>Sándor</td>
+                                <td>127e</td>
+                                <td>Fizika, Matematika</td>
+                            </tr>
+                            <tr>
+                                <td>János</td>
+                                <td>130e</td>
+                                <td>Testnevelés, Angol, Földrajz</td>
+                            </tr>
+                            <tr>
+                                <td>Éva</td>
+                                <td>150e</td>
+                                <td>Kémia, Fizika, Matematika</td>
+                            </tr>
+                            <tr>
+                                <td>Erika</td>
+                                <td>133e</td>
+                                <td>Angol, Magyar</td>
+                            </tr>
+                            <tr>
+                                <td>Gyula</td>
+                                <td>100e</td>
+                                <td>Magyar, Testnevelés</td>
+                            </tr>
+                            <tr>
+                                <td>András</td>
+                                <td>126e</td>
+                                <td>Matematika, Földrajz</td>
+                            </tr>
+                            <tr>
+                                <td>Erzsébet</td>
+                                <td>152e</td>
+                                <td>Fizika</td>
+                            </tr>
+                            <tr>
+                                <td>Kinga</td>
+                                <td>80e</td>
+                                <td>Kémia</td>
+                            </tr>
+                        </table>
+                        <div class="leiras">Az igazgató szeretné úgy felvenni a tanárokat, hogy minden tantárgyat a felvett tanárok egyike tudjon oktatni, de az óraterv alapján angolból 2 tanárra is szükség lesz.</div>
+                        <div class="kerdes">Kiket kell felvennie, ha minimalizálni akarja a felvett tanárok ﬁzetését?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_6()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_6()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_6()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat7-->
+                <div class="card">
+                    <div class="card-header">
+                        7.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy üzemben 40 hölgy dolgozik terítők gyártásán, ahol a munkafolyamat a következő három lépésből áll: 1. varrás, 2. mintázás, 3. vasalás. Az első lépést 22, a másodikat 13, a harmadikat pedig 5 hölgy végzi. Mindegyikük heti 40 órát dolgozik a táblázat azt mutatja, hogy az egyes terítőket hány percig tart elkészíteni, a különböző munkafolyamatok esetén:</div>
+                        <table align="center">
+                            <tr>
+                                <th>Terítők</th>
+                                <th style="border-right: none; border-left: none;">varrás</th>
+                                <th style="border-right: none; border-left: none;">mintázás</th>
+                                <th style="border-right: none; border-left: none;">vasalás</th>
+                                <th>Képesítés</th>
+                                <th>Képesítés</th>
+                            </tr>
+                            <tr>
+                                <td>1. terítő</td>
+                                <td style="border-right: none; border-left: none;">72</td>
+                                <td style="border-right: none; border-left: none;">33</td>
+                                <td style="border-right: none; border-left: none;">30</td>
+                                <td>350</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2. terítő</td>
+                                <td style="border-right: none; border-left: none;">56</td>
+                                <td style="border-right: none; border-left: none;">62</td>
+                                <td style="border-right: none; border-left: none;">32</td>
+                                <td>150</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>3. terítő</td>
+                                <td style="border-right: none; border-left: none;">40</td>
+                                <td style="border-right: none; border-left: none;">27</td>
+                                <td style="border-right: none; border-left: none;">21</td>
+                                <td>100</td>
+                                <td>4</td>
+                            </tr>
+                        </table>
+                        <div class="leiras">A rendelkezésre álló anyag 210 m<sup>2</sup> textil és 350 m cérna. Az első terítőt 750 ft-os, a másodikat 900 ft-os, a harmadikat 450 ft-os haszonnal lehet eladni.</div>
+                        <div class="kerdes">Melyik terítőből mennyit gyártsanak hetente az üzemben?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_7()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_7()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_7()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat8-->
+                <div class="card">
+                    <div class="card-header">
+                        8.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy kiadó 4 egyetemi jegyzet kiadását fontolgatja és tudják, hogy mennyi bevételre számíthatnak jegyzetenként. Korábbi tapasztalataik alapján, egy adott darabszám felett már nem érdemes gyártani, mert nem lesz a jegyzetekre kereslet. Az első jegyzet esetén ez 140 darab, a másodiknál 106 darab, a harmadiknál 92 darab, a negyediknél 112 darab. A következő táblázat mutatja a költségeket, valamint az eladási árat:</div>
+                        <table align="center">
+                            <tr>
+                                <th>Jegyzetek</th>
+                                <th>Eladási ár</th>
+                                <th>Költség</th>
+                                <th>Honorárium</th>
+                            </tr>
+                            <tr>
+                                <td>1. jegyzet</td>
+                                <td>700</td>
+                                <td>360</td>
+                                <td>1200</td>
+                            </tr>
+                            <tr>
+                                <td>2. jegyzet</td>
+                                <td>820</td>
+                                <td>380</td>
+                                <td>1400</td>
+                            </tr>
+                            <tr>
+                                <td>3. jegyzet</td>
+                                <td>690</td>
+                                <td>310</td>
+                                <td>1000</td>
+                            </tr>
+                            <tr>
+                                <td>4. jegyzet</td>
+                                <td>780</td>
+                                <td>400</td>
+                                <td>1300</td>
+                            </tr>
+                        </table>
+                        <div class="leiras">A kiadó összesen 350 jegyzetet tud elkészíteni.</div>
+                        <div class="kerdes">Melyik jegyzetből ne készítsen egyetlen példányt sem, és hogyan maximalizálja a hasznát?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_8()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_8()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_8()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat9-->
+                <div class="card">
+                    <div class="card-header">
+                        9.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy vállalat kanapék és fotelek gyártásával foglalkozik, melyhez bőrt, szövetet, valamint faanyagot használ fel. A bőrből 250 m<sup>2</sup>, szövetből 350 m<sup>2</sup>, a fából 1000 egység áll rendelkezésre.</div>
+                        <table align="center">
+                            <tr>
+                                <th>Kanapék</th>
+                                <th>Bőr</th>
+                                <th>Szövet</th>
+                                <th>Fa</th>
+                                <th>Munkaóra</th>
+                                <th>Eladási ár</th>
+                            </tr>
+                            <tr>
+                                <td>1. kanapé</td>
+                                <td>10</td>
+                                <td>2</td>
+                                <td>25</td>
+                                <td>3</td>
+                                <td>14000</td>
+                            </tr>
+                            <tr>
+                                <td>2. kanapé</td>
+                                <td>14</td>
+                                <td>3</td>
+                                <td>22</td>
+                                <td>4</td>
+                                <td>15500</td>
+                            </tr>
+                            <tr>
+                                <td>3. kanapé</td>
+                                <td>0</td>
+                                <td>14</td>
+                                <td>19</td>
+                                <td>2</td>
+                                <td>13000</td>
+                            </tr>
+                            <tr>
+                                <td>4. kanapé</td>
+                                <td>0</td>
+                                <td>12</td>
+                                <td>18</td>
+                                <td>2.5</td>
+                                <td>12500</td>
+                            </tr>
+                        </table>
+                        <div class="kerdes">Hogyan tudja a vállalat maximalizálni a bevételt, ha a gyártáshoz 200 munkaóra áll rendelkezésre?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_9()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_9()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_9()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat10-->
+                <div class="card">
+                    <div class="card-header">
+                        10.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy edző szeretne három új csatárt igazolni a focicsapatába. Próbajátékra hívott néhány játékost. 6 játékos jöhet szóba:</div>
+                        <table align="center">
+                            <tr>
+                                <th>Név</th>
+                                <th>Magasság</th>
+                                <th>Cselezés</th>
+                                <th>Kapura lövés</th>
+                                <th>Labdakezelés</th>
+                                <th>Fizetési igény</th>
+                            </tr>
+                            <tr>
+                                <td>Sándo</td>
+                                <td>206</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>140000</td>
+                            </tr>
+                            <tr>
+                                <td>Béla</td>
+                                <td>181</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>80000</td>
+                            </tr>
+                            <tr>
+                                <td>Attila</td>
+                                <td>175</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>130000</td>
+                            </tr>
+                            <tr>
+                                <td>Ákos</td>
+                                <td>210</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>132000</td>
+                            </tr>
+                            <tr>
+                                <td>Pál</td>
+                                <td>190</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>145000</td>
+                            </tr>
+                            <tr>
+                                <td>József</td>
+                                <td>211</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>125000</td>
+                            </tr>
+                        </table>
+                        <div class="leiras">Az edző a következőket szeretné:</div>
+                        <li class="leiras">a három játékos átlag cselezési képessége 3.9 felett legyen,</li>
+                        <li class="leiras">a három játékos átlagmagassága legyen 200 cm felett,</li>
+                        <li class="leiras" style="margin-bottom: 20px;">a játékosok átlagos kapura lövése legyen 3.8-nál nagyobb.</li>
+                        <div class="kerdes">Kiket igazoljon le az edző, hogy a lehető legkevesebb legyen az újonnan igazolt játékosok ﬁzetése?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_10()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_10()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_10()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat11-->
+                <div class="card">
+                    <div class="card-header">
+                        11.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">A helyi rendőrőrs ügyeletet biztosít a városban. Az ügyeletet teljesítő rendőrök száma 4 óránként változik:</div>
+                        <table align="center">
+                            <tr>
+                                <th>Idő</th>
+                                <th>Rendőrök száma</th>
+                            </tr>
+                            <tr>
+                                <td>0-4</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>4-8</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>8-12</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>12-16</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>16-20</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>20-24</td>
+                                <td>13</td>
+                            </tr>
+                        </table>
+                        <div class="leiras">Minden rendőr 8 órát dolgozik és ennek 2 egymást követő 4 órás ügyeletnek kell lennie. A rendőrőrs szeretné minimalizálni a rendőrök számát.</div>
+                        <div class="kerdes">Hány rendőrre van szükség, hogy az ügyeletet el tudják látni minden időszakban?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_11()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_11()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_11()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat12-->
+                <div class="card">
+                    <div class="card-header">
+                        12.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy új bevásárlóközpont meghatározta, hogy melyik napon, hány pénztárosra lenne szükség: hétfőn 21, kedden 25, szerdán 17, csütörtökön 19, pénteken 28, szombaton 26, vasárnap 20. Minden alkalmazott 5 napot dolgozik egymás után, majd 2 napot pihen.</div>
+                        <div class="kerdes">Ezt ﬁgyelembe véve, hány pénztárost vegyen fel az áruház, ha minden nap legalább annyinak kell dolgozni, ahány munkatársra szükség van?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_12()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_12()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_12()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat13-->
+                <div class="card">
+                    <div class="card-header">
+                        13.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy hat gyümölcsös turmixot szeretne készíteni, amihez a következő alapanyagok állnak rendelkezésre: alma, banán, körte, kiwi, narancs, őszibarack.A következő táblázat grammban mutatja egy darab gyümölcsben lévő vitamin mennyiségét:</div>
+                        <table align="center">
+                            <tr>
+                                <th>Gyümölcsök</th>
+                                <th>A</th>
+                                <th>B</th>
+                                <th>C</th>
+                                <th>ÁR</th>
+                            </tr>
+                            <tr>
+                                <td>Alma</td>
+                                <td>20</td>
+                                <td>30</td>
+                                <td>10</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>Banán</td>
+                                <td>10</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>65</td>
+                            </tr>
+                            <tr>
+                                <td>Körte</td>
+                                <td>30</td>
+                                <td>30</td>
+                                <td>20</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>Kiwi</td>
+                                <td>10</td>
+                                <td>40</td>
+                                <td>40</td>
+                                <td>70</td>
+                            </tr>
+                            <tr>
+                                <td>Narancs</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>50</td>
+                                <td>65</td>
+                            </tr>
+                            <tr>
+                                <td>Barack</td>
+                                <td>20</td>
+                                <td>20</td>
+                                <td>30</td>
+                                <td>60</td>
+                            </tr>
+                        </table>
+                        <div class="leiras">A turmixot úgy akarja összeállítani, hogy minimum 100-100 gramm A és B vitamin és 180 gramm C vitamin jusson a szervezetébe és minimum 3 fajta gyümölcs legyen a turmixban.</div>
+                        <div class="kerdes">Melyik gyümölcsből hány darabot venne, hogy minimalizálja a vásárlás költségét?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_13()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_13()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_13()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat14-->
+                <div class="card">
+                    <div class="card-header">
+                        14.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Reggelire szeretne egy tál gabonapelyhet enni. 2 fajta csomagot talál otthon, amelyek 100 grammosak és mindkét csomagban van csokis, vaníliás, mézesés sima gabonapehely, csak más-más arányban. Szeretné, ha csokis lenne, de nem túl édes. Ezekkel a kívánságokkal minimum 40 gramm csokis gabonapelyhet és legfeljebb 20% mézeset tartalmazhat a reggeli.</div>
+                        <table align="center">
+                            <tr>
+                                <th>Csomagok</th>
+                                <th>Csoki</th>
+                                <th>Vanilia</th>
+                                <th>Méz</th>
+                                <th>Sima</th>
+                            </tr>
+                            <tr>
+                                <td>1.csomag</td>
+                                <td>20</td>
+                                <td>25</td>
+                                <td>40</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>2.csomag</td>
+                                <td>50</td>
+                                <td>10</td>
+                                <td>15</td>
+                                <td>25</td>
+                            </tr>
+                        </table>
+                        <div class="kerdes">Állítson elő egy 100 grammos keveréket reggelire! Ehhez milyen arányban keverné össze a két csomagot, ha az első csomag ára 500 forint, a másodiké 850 forint és a lehető legkevesebbet akar költeni a csomagok vásárlására?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_14()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_14()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_14()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat15-->
+                <div class="card">
+                    <div class="card-header">
+                        15.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy bevásárló központ vezetője az egyik alkalmazottját vásárlási utalványokkal díjazza munkája elismeréséért. összesen 17900 ft értékben akar jutalmat adni 2000, 1500, 1000, 700, 300 forintos utalványok formájában. Viszont a vezető elfoglalt és nem akar sok időt eltölteni az utalványok írásával, ezért a lehető legkevesebb utalványt akarja kiállítani. Az 1000-es és 700-as utalványokból sok van, ezért ezekből összesen minimum 8-at akar odaadni.</div>
+                        <div class="kerdes">Melyik utalványból hányat adjon a vezető?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_15()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_15()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_15()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat16-->
+                <div class="card">
+                    <div class="card-header">
+                        16.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy szállítási cég szeretné az áruszállítmányait elszállítani. A cégnak egy vonatja van 3 vagonnal. A vagonok a következő tulajdonsággal rendelkeznek</div>
+                        <table align="center">
+                            <tr>
+                                <th>Vagonok</th>
+                                <th>Súlykapacitás(t)</th>
+                                <th>Térlapacitás(m<sup>2</sup>)</th>
+                            </tr>
+                            <tr>
+                                <td>Vagon1</td>
+                                <td>17</td>
+                                <td>4000</td>
+                            </tr>
+                            <tr>
+                                <td>Vagon2</td>
+                                <td>11</td>
+                                <td>7000</td>
+                            </tr>
+                            <tr>
+                                <td>Vagon3</td>
+                                <td>12</td>
+                                <td>8000</td>
+                            </tr>
+                        </table>
+                        <div class="leiras">Az 4 fajta szállítmány van:</div>
+                        <li class="leiras">13 tonna áll rendelkezésre, 1 tonna 400 m<sup>2</sup>-t foglal el, és a proﬁtja a cégnek ha 1 tonnát elszállít ebből az áruból 2000$.</li>
+                        <li class="leiras">20 tonna áll rendelkezésre, 1 tonna 600 m<sup>2</sup>-t foglal el, és a proﬁtja a cégnek ha 1 tonnát elszállít ebből az áruból 2500$.</li>
+                        <li class="leiras">8 tonna áll rendelkezésre, 1 tonna 700 m<sup>2</sup>-t foglal el, és a proﬁtja a cégnek ha 1 tonnát elszállít ebből az áruból 3200$.</li>
+                        <li class="leiras" style="margin-bottom: 20px;">19 tonna áll rendelkezésre, 1 tonna 550 m<sup>2</sup>-t foglal el, és a proﬁtja a cégnek ha 1 tonnát elszállít ebből az áruból 2800$.</li>
+                        <div class="kerdes">Melyik szállítmányból mennyivel kellene megtölteni a cégnek a vagonokat, hogy maximalizálja a proﬁtját?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_16()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_16()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_16()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat17-->
+                <div class="card">
+                    <div class="card-header">
+                        17.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy nagymama idén szeretne a locsolóknak hímes tojásokat adni. 3 fajta mintát gondolt ki, amelyekhez piros, fehér, kék színű festék. 0.5 liter fehér, 0.7 liter piros, 0.35 liter kék festéke maradt tavalyról. </div>
+                        <li class="leiras">Az 1. minta esetén 50 ml piros festék és 20 ml fehér festék kell.</li>
+                        <li class="leiras">A 2. minta esetén 40 ml kék festék, 15 ml fehér és 5ml piros festék kell.</li>
+                        <li class="leiras" style="margin-bottom: 20px;">Végül a 3. mintához mindegyik színből 25 ml kell.</li>
+                        <div class="leiras">Az 1. minta elkészítéshez 18 perc kell, a 2-hoz 20 perc, a 3-hoz 15 perc szükséges. A nagymama csak 14:00 és 19:30 között ér rá megcsinálni a tojások mintáit.</div>
+                        <div class="kerdes">Melyikből hányat csináljon, ha mindegyikből akar minimum 3 darabot és azt szeretné, hogy a lehető legtöbb mintázott tojás készítse el?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_17()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_17()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_17()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!--feladat18-->
+                <div class="card">
+                    <div class="card-header">
+                        18.feladat
+                    </div>
+                    <div class="card-body">
+                        <div class="leiras">Egy gyár írólapok és wcpapír gyártásával foglalkozik. A cégnek 50 kg fanyersanyag van, valamint 15kg szétforgácsolt fahulladéka van, amely alkalmas wcpapír előállításához. 1kg írólap előállításához 1,2kg fanyersanyag szükséges, viszont emellett keletkezik 0,2kg fahulladék. 1 csomag wcpapír előállításához 0,1kg fanyersanyagra és 0,5kg fahulladékra van szükség. 1 kg írólap előállítása 45 percet vesz igénybe, míg 1 csomag wcpapír előállításához 30 perc szükséges. A gyár csak 20 órát tud rászánni ezek gyártására. Az írólapon 400 forint a haszna a gyárnak kg-ként, míg a wcpapíron 300 forint csomagonként. Hány kg írólapot és hány csomag wcpapír gyártson a gyár, ha maximalizálni akarja a gyár a proﬁtját, valamint azt szeretné, hogy a wcpapír csomagok száma 3-szor annyi legyen mind ahány kg írópapírt előállítottunk?</div>
+                        <div class="kerdes">Melyikből hányat csináljon, ha mindegyikből akar minimum 3 darabot és azt szeretné, hogy a lehető legtöbb mintázott tojás készítse el?</div>
+                        
+                        <!--download codes-->
+                        <div class="card">
+                            <div class="card-header">
+                                <button id="showDownloads" class="btn" data-toggle="collapse" data-target="#downloadableCodes" aria-expanded="false" aria-controls="downloadableCodes">
+                                Forráskódok letöltése</button>
+                            </div>
+                        
+                            <div id="downloadableCodes" class="collapse show">
+                            <div class="card-body">
+                                <mat-selection-list id="DownloadCodes">
+                                    <mat-list-item (click)="downloadRcode2_18()"><img src="../../assets/sources/pictures/Rlogo.png" alt="ICON" width="20" height="20"> - R megoldás letöltése</mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadLingocode2_18()"><img src="../../assets/sources/pictures/lingo.png" alt="ICON" width="20" height="20"> - Lingo megoldás letöltése </mat-list-item>
+                                    <mat-divider></mat-divider>
+                                    <mat-list-item (click)="downloadSascode2_18()"><img src="../../assets/sources/pictures/SAS.png" alt="ICON" width="30" height="20"> - SAS/OR megoldás letöltése </mat-list-item>
+                                </mat-selection-list>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+            </div>
+        
         </div>
     </div>
