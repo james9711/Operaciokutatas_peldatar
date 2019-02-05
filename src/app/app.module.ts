@@ -8,6 +8,7 @@ import { MaterialModule } from './material';
 import { PeldatarComponent } from './peldatar/peldatar.component';
 import { HighlightJsModule } from 'ngx-highlight-js';
 
+
 @NgModule({
   declarations: [
     AppComponent,
