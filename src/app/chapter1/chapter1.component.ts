@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {MatSnackBar} from '@angular/material';
+import { AppComponent } from '../app.component';
 
 @Component({
+  providers:[AppComponent],
   selector: 'app-chapter1',
   templateUrl: './chapter1.component.html',
   styleUrls: ['./chapter1.component.css', '../app.component.css']
@@ -9,27 +10,17 @@ import {MatSnackBar} from '@angular/material';
 
 export class Chapter1Component implements OnInit {
 
-  constructor(private snackBar: MatSnackBar) { }
+  constructor(private appComp: AppComponent) { }
 
   ngOnInit() {
   }
 
-  messageFailed = "A kód nem elérhető!";
-  messageSuccess = "A kód sikeresen letöltődött!";
-  action = "CLOSE";
-
-  downloadFailedSnackBar() {
-    this.snackBar.open(this.messageFailed, this.action, {
-      duration: 4000,
-    });
-    console.log("no file found");
+  downloadFailedSnackBar(): void {
+    this.appComp.basicDownloadFailedSnackBar();
   }
 
-  downloadSuccessSnackBar() {
-    this.snackBar.open(this.messageSuccess, this.action, {
-      duration: 4000,
-    });
-    console.log("files successfully downloaded");
+  downloadSuccessSnackBar(): void {
+    this.appComp.basicDownloadSuccessSnackBar();
   }
 
   //R codes
