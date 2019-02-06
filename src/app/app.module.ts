@@ -7,13 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
 import { PeldatarComponent } from './peldatar/peldatar.component';
 import { HighlightJsModule } from 'ngx-highlight-js';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    PeldatarComponent
+    PeldatarComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

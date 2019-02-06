@@ -6,5 +6,12 @@
     word-spacing: 10px;
     margin-top: 20px;
     margin-bottom: 50px;
-    text-align:center;
+    text-align: center;
+    animation: titleAnimation 3s 1;
+}
+
+@keyframes titleAnimation {
+    30%{
+        letter-spacing: 20px;
+    }
 }

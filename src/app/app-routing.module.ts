@@ -10,9 +10,10 @@ import { Chapter6Component } from './chapter6/chapter6.component';
 import { Chapter7Component } from './chapter7/chapter7.component';
 import { TartalomjegyzekComponent } from './tartalomjegyzek/tartalomjegyzek.component';
 import { PeldatarComponent } from './peldatar/peldatar.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'peldatar', pathMatch: 'full'},
+  { path: '', redirectTo: 'landing-page', pathMatch: 'full'},
   { path: 'chapter1', component: Chapter1Component },
   { path: 'chapter2', component: Chapter2Component },
   { path: 'chapter3', component: Chapter3Component },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'chapter6', component: Chapter6Component },
   { path: 'chapter7', component: Chapter7Component },
   { path: 'tartalomjegyzek', component: TartalomjegyzekComponent },
-  { path: 'peldatar', component: PeldatarComponent }
+  { path: 'peldatar', component: PeldatarComponent },
+  { path: 'landing-page', component: LandingPageComponent}
 ];
 
 @NgModule({
@@ -29,4 +31,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [Chapter1Component, Chapter2Component, Chapter3Component, Chapter4Component, Chapter5Component, Chapter6Component, Chapter7Component, TartalomjegyzekComponent]
+export const routingComponents = [Chapter1Component, Chapter2Component, Chapter3Component, Chapter4Component, Chapter5Component, Chapter6Component, Chapter7Component, TartalomjegyzekComponent, LandingPageComponent]
