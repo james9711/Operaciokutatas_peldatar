@@ -1,5 +1,13 @@
+#title {
+    word-spacing: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
 .carousel-inner img {
     width: 100%;
+    border-radius: 40px 40px 15px 15px;
 }
 
 #carouselExampleIndicators {
@@ -8,11 +16,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 40%;
-    width: 70%;
-    box-shadow: 0 10px 10px -6px black;
-}
-
-#carouselExampleIndicators img {
-    border-radius: 15px;
+    width: 60%;
+    box-shadow: 0 10px 10px -5px black;
+    border-radius: 40px 40px 15px 15px;
 }

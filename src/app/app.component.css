@@ -54,7 +54,7 @@
   border: none;
   text-align: left;
   border-radius: 0;
-  font-size: 18px;
+  font-size: 20px;
   color: rgb(24, 24, 24);
   cursor: pointer;
 }
@@ -137,21 +137,7 @@ li{
     0 -20px 0 -10px #eee,
     0 -20px 1px -9px rgba(0,0,0,0.15);
     padding: 3%;
-    animation-duration: 1s;
-    animation-name: slidein;
     cursor: pointer;
-}
-
-@keyframes slidein {
-  from {
-      margin-left: 20%;
-      width: 120%;
-  }
-
-  to {
-      margin-left: 0%;
-      width: 100%;
-  }
 }
 
 table, th, td {
