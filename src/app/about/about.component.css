@@ -1,0 +1,33 @@
+#title {
+    word-spacing: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.alfejezetcim {
+    color:rgb(160, 47, 47);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+li{
+    text-align: justify;
+    text-indent: 10px;
+    position: relative;
+    left: 30px;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 3px;
+    margin: 20px;
+    line-height: 120%;
+}
+
+.card {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    background-clip: border-box;
+    border: 1px solid rgb(0, 0, 0, 0.125);
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.897);
+}

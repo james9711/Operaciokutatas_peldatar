@@ -8,6 +8,7 @@ import { MaterialModule } from './material';
 import { PeldatarComponent } from './peldatar/peldatar.component';
 import { HighlightJsModule } from 'ngx-highlight-js';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     AppComponent,
     routingComponents,
     PeldatarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

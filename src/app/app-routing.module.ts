@@ -11,9 +11,10 @@ import { Chapter7Component } from './chapter7/chapter7.component';
 import { TartalomjegyzekComponent } from './tartalomjegyzek/tartalomjegyzek.component';
 import { PeldatarComponent } from './peldatar/peldatar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'landing-page', pathMatch: 'full'},
+  { path: '', redirectTo: 'about', pathMatch: 'full'},
   { path: 'chapter1', component: Chapter1Component },
   { path: 'chapter2', component: Chapter2Component },
   { path: 'chapter3', component: Chapter3Component },
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'chapter7', component: Chapter7Component },
   { path: 'tartalomjegyzek', component: TartalomjegyzekComponent },
   { path: 'peldatar', component: PeldatarComponent },
-  { path: 'landing-page', component: LandingPageComponent}
+  { path: 'landing-page', component: LandingPageComponent},
+  { path: 'about', component: AboutComponent }
 ];
 
 @NgModule({
