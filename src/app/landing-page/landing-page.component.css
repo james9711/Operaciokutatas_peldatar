@@ -8,6 +8,7 @@
 .carousel-inner img {
     width: 100%;
     border-radius: 40px 40px 15px 15px;
+    opacity: 0.8;
 }
 
 #carouselExampleIndicators {
@@ -17,34 +18,21 @@
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    box-shadow: 0 10px 10px -5px black;
+    box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.527);
     border-radius: 40px 40px 15px 15px;
 }
 
-.card {
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto;
-    background-clip: border-box;
-    border: 1px solid rgb(0, 0, 0, 0.125);
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.897);
+.carousel-control-prev:hover {
+  background-image: linear-gradient(to right, rgba(8, 8, 8, 0.829), rgba(122, 122, 122, 0.089));
+  border-radius: 40px 0px 0px 15px;
 }
 
-.leiras, li, .kerdes{
-  text-align: justify;
-  text-indent: 20px;
-  position: relative;
-  left: 30px;
-  font-size: 20px;
-  text-align: left;
-  margin-bottom: 5px;
-  line-height: 150%;
-  overflow: hidden;
+.carousel-control-next:hover {
+  background-image: linear-gradient(to left, rgba(8, 8, 8, 0.829), rgba(129, 129, 129, 0.089));
+  border-radius: 0px 40px 15px 0px;
 }
 
-li{
-  text-indent: 10px;
-  text-align: left;
-  margin: 20px;
-  line-height: 120%;
+.carousel-indicators li {
+  margin: 5px;
+  height: 15px;
 }

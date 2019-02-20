@@ -31,3 +31,24 @@ li{
     border: 1px solid rgb(0, 0, 0, 0.125);
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.897);
 }
+
+.card-deck .card {
+    margin: 20px;
+    opacity: 0.9;
+}
+
+.card-deck .card:hover {
+    opacity: 1;
+    border: 1px solid rgba(0, 0, 0, 0.349);
+    box-shadow: 0 12px 10px -6px rgba(0, 0, 0, 0.897);
+}
+
+.card-deck .card-title {
+    margin-bottom: 40px;
+}
+
+.card-deck .text-muted {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
