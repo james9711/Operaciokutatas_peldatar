@@ -10,7 +10,6 @@ import { Chapter6Component } from './chapter6/chapter6.component';
 import { Chapter7Component } from './chapter7/chapter7.component';
 import { TartalomjegyzekComponent } from './tartalomjegyzek/tartalomjegyzek.component';
 import { PeldatarComponent } from './peldatar/peldatar.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
@@ -24,7 +23,6 @@ const routes: Routes = [
   { path: 'chapter7', component: Chapter7Component },
   { path: 'tartalomjegyzek', component: TartalomjegyzekComponent },
   { path: 'peldatar', component: PeldatarComponent },
-  { path: 'landing-page', component: LandingPageComponent},
   { path: 'about', component: AboutComponent }
 ];
 
@@ -33,4 +31,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [Chapter1Component, Chapter2Component, Chapter3Component, Chapter4Component, Chapter5Component, Chapter6Component, Chapter7Component, TartalomjegyzekComponent, LandingPageComponent]
+export const routingComponents = [Chapter1Component, Chapter2Component, Chapter3Component, Chapter4Component, Chapter5Component, Chapter6Component, Chapter7Component, TartalomjegyzekComponent, PeldatarComponent, AboutComponent]

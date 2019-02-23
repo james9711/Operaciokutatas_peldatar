@@ -5,19 +5,13 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
-import { PeldatarComponent } from './peldatar/peldatar.component';
 import { HighlightJsModule } from 'ngx-highlight-js';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents,
-    PeldatarComponent,
-    LandingPageComponent,
-    AboutComponent
+    routingComponents
   ],
   imports: [
     BrowserModule,
