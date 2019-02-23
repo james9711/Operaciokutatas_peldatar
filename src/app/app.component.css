@@ -19,16 +19,16 @@
 .left {
   padding: 10px;
   left: 0;
-  width: 15%;
+  width: 14%;
   background-color: rgb(136, 129, 118);
   color: black;
   box-shadow: 10px 6px 6px -6px black;
 }
 
 .right {
-  padding: 70px;
+  padding: 4%;
   right: 0;
-  width: 85%;
+  width: 86%;
   background-color: rgba(184, 172, 158, 0.822);
 }
 
