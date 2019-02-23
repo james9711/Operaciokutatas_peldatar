@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-chapter7',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Chapter7Component implements OnInit {
 
-  constructor() { }
+  constructor(private appComp: AppComponent) { }
 
   ngOnInit() {
+  }
+
+  downloadFailedSnackBar(): void {
+    this.appComp.basicDownloadFailedSnackBar();
+  }
+
+  downloadSuccessSnackBar(): void {
+    this.appComp.basicDownloadSuccessSnackBar();
   }
 
 }
