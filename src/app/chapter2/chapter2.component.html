@@ -32,6 +32,78 @@
             <div class="paperUp">
                 <h5>2.1. Elméleti levezetés, kidolgozás</h5>
 
+                <mat-horizontal-stepper>
+                    <mat-step [stepControl]="firstFormGroup">
+                        <form [formGroup]="firstFormGroup">
+                        <ng-template matStepLabel>LÉPÉS 1</ng-template>
+                        <div class="leiras">Standard alak:</div>
+                        <div class="centeredEquation">
+                            <p> P(x) = 3x<sub>1</sub> + 2x<sub>2</sub> → MAX</p>
+                            <p> 1.) x<sub>1</sub> + x<sub>2</sub> &#8804; 80</p>
+                            <p> 2.) 2x<sub>1</sub> + x<sub>2</sub> &#8804; 100</p>
+                            <p> 3.) x<sub>1</sub> &#8804; 120</p>
+                            <p> x<sub>1</sub>, x<sub>2</sub> &#8805; 0</p>
+                        </div>
+                        <div>
+                            <button mat-button matStepperNext>Next</button>
+                        </div>
+                        </form>
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup">
+                        <form [formGroup]="secondFormGroup">
+                        <ng-template matStepLabel>LÉPÉS 2</ng-template>
+                        <div class="leiras">Kanonikus alak:</div>
+                        <div class="centeredEquation">
+                            <p> P(x) = 3x<sub>1</sub> + 2x<sub>2</sub> → MAX</p>
+                            <p> 1.) x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub> &#8804; 80</p>
+                            <p> 2.) 2x<sub>1</sub> + x<sub>2</sub> + x<sub>4</sub> &#8804; 100</p>
+                            <p> 3.) x<sub>1</sub> + x<sub>5</sub> &#8804; 120</p>
+                            <p> x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>4</sub>, x<sub>5</sub> &#8805; 0</p>
+                        </div>
+                        <div class="leiras">Mátrixos alak:</div>
+                        <img src="../../assets/sources/pictures/ch2 tablak/matrixos_alak.PNG" class="diagram">
+                        <div class="leiras">Szimplex tábla, majd a bázis megoldás felírása: </div>
+                        <img src="../../assets/sources/pictures/ch2 tablak/step1.PNG" class="diagram">
+                        <div>
+                            <button mat-button matStepperPrevious>Back</button>
+                            <button mat-button matStepperNext>Next</button>
+                        </div>
+                        </form>
+                    </mat-step>
+                    <mat-step [stepControl]="thirdFormGroup">
+                        <form [formGroup]="thirdFormGroup">
+                        <ng-template matStepLabel>LÉPÉS 3</ng-template>
+                        <div class="leiras">Szimplex tábla, majd a bázis megoldás felírása: </div>
+                        <img src="../../assets/sources/pictures/ch2 tablak/step2.PNG" class="diagram">
+                        <div>
+                            <button mat-button matStepperPrevious>Back</button>
+                            <button mat-button matStepperNext>Next</button>
+                        </div>
+                        </form>
+                    </mat-step>
+                    <mat-step [stepControl]="fourthFormGroup">
+                        <form [formGroup]="fourthFormGroup">
+                        <ng-template matStepLabel>LÉPÉS 4</ng-template>
+                        <div class="leiras">Szimplex tábla, majd a bázis megoldás felírása: </div>
+                        <img src="../../assets/sources/pictures/ch2 tablak/step3.PNG" class="diagram">
+                        <div>
+                            <button mat-button matStepperPrevious>Back</button>
+                            <button mat-button matStepperNext>Next</button>
+                        </div>
+                        </form>
+                    </mat-step>
+                    <mat-step>
+                        <ng-template matStepLabel>LÉPÉS 5 (végeredmény meghatározása)</ng-template>
+                        <div class="leiras">Szimplex tábla, majd a bázis megoldás felírása: </div>
+                        <img src="../../assets/sources/pictures/ch2 tablak/step4.PNG" class="diagram">
+                        <div class="leiras">Az szimplex tábla alsó sorában már nem szerepel negatív változó → nem szükséges további báziscsere → optimális megoldás (kilépési pont)</div>
+                        <div class="leiras">P(x) = 180 </div>
+                        <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        </div>
+                    </mat-step>
+                </mat-horizontal-stepper>
+
             </div>
 
         </div>
