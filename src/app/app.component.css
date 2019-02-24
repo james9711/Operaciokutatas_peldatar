@@ -211,3 +211,9 @@ h5 {
   border: 1px solid rgb(0, 0, 0, 0.125);
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.897);
 }
+
+.btn-outline-danger {
+  border: none;
+  width: 60px;
+  height: 40px;
+}
