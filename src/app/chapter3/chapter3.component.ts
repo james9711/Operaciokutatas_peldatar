@@ -21,4 +21,9 @@ export class Chapter3Component implements OnInit {
     this.appComp.basicDownloadSuccessSnackBar();
   }
 
+  downloadSolutionForTask4() {
+    window.open("../../assets/sources/files/ch3_megoldott.pdf");
+    this.appComp.basicDownloadSuccessSnackBar();
+  }
+
 }

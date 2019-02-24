@@ -17,19 +17,22 @@
 }
 
 .left {
-  padding-left: 1vw;
+  padding: 1vw;
   left: 0;
-  width: 15%;
-  background-color: rgb(136, 129, 118);
+  width: 16%;
+  background-color: rgba(136, 129, 118, 0.795);
   color: black;
   box-shadow: 10px 6px 6px -6px black;
 }
 
 .right {
-  padding: 4vw;
+  padding-top: 6vh;
+  padding-bottom: 4vh;
+  padding-left: 4vw;
+  padding-right: 4vw;
   right: 0;
-  width: 85%;
-  background-color: rgba(184, 172, 158, 0.822);
+  width: 84%;
+  background-color: rgba(184, 172, 158, 0.74);
 }
 
 .menu, .book {
@@ -63,6 +66,7 @@
 }
 
 .menu button:hover {
+  opacity: 1;
   color: rgb(221, 218, 218);
   transform: scale(1.1);
   transition: transform .2s;
@@ -71,7 +75,7 @@
 
 .menu h5 {
   text-align: center;
-  padding-top: 2vh;
+  padding-top: 3vh;
   padding-bottom: 1vh;
   font-size: 3vh;
   font-weight: bold;
@@ -185,7 +189,7 @@ h5 {
   font-size: 20px;
   font-weight: bold;
   color: rgb(59, 59, 59);
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .nav-link:hover {
@@ -194,7 +198,7 @@ h5 {
   background-color: rgba(160, 47, 47, 0.548);
   border: none;
   transition: transform .5s;
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
 }
 
 #showDownloads{
@@ -219,4 +223,14 @@ h5 {
   border: none;
   width: 60px;
   height: 40px;
+}
+
+.centeredEquation {
+  margin: auto;
+  width: 25%;
+  border: 1px solid rgba(0, 0, 0, 0.027);
+}
+
+.centeredEquation p {
+  left: 20px;
 }

@@ -153,9 +153,11 @@
             <div class="kerdes" style="margin-top: 40px">3. Egy munkat´ars elt¨orte a kez´et,´ıgy az el´erhet˝o fafarag´o ´or´ak sz´ama lecs¨okkent 10 ´or´aval. Adjunk tan´acsot hogyan ´all´ıtsa be az optim´alis term´ek-¨osszet´etelt a v´allalat! </div> 
             <li> A fafarag´o ´or´ak sz´ama az al´abbi hat´arok k¨oz¨ott mozoghat az adott b´azisban &#123; x<sub>5</sub>, x<sub>2</sub>, x<sub>1</sub> &#125;: 80−20 &#8804; FF &#8804; 80 + 20, azaz meg tudjuk mondani mi legyen ha 10-zel cs¨okkenne az el´erhet˝o ´orasz´am: </li>
             <li> P(x') = 180−(10∗1) = 170, ´ıgy csak 170 $ proﬁtot tud el´erni, az al´abbi m´odon:</li>
-            <div style="text-align: center">x<sub>1</sub> + x<sub>2</sub>(+ x<sub>3</sub> = 0) = 80−10 = 70</div>
-            <div style="text-align: center">2x<sub>1</sub> + x<sub>2</sub>(+ x<sub>4</sub> = 0) = 100</div>
-            <div style="text-align: center">x<sub>1</sub> + x<sub>5</sub> = 40</div>
+            <div class="centeredEquation">
+                <p>x<sub>1</sub> + x<sub>2</sub>(+ x<sub>3</sub> = 0) = 80−10 = 70</p>
+                <p>2x<sub>1</sub> + x<sub>2</sub>(+ x<sub>4</sub> = 0) = 100</p>
+                <p>x<sub>1</sub> + x<sub>5</sub> = 40</p>
+            </div>
             <li> x'<sub>1</sub> = 30 j´at´ek katon´at ´es x'<sub>2</sub> = 40 vonatot gy´artson!</li>
 
             <div class="kerdes" style="margin-top: 40px">4. A felu¨letkezel´es munkafolyamat ´arammal mu˝k¨od˝o g´epeket ig´enyel, ´am a h´eten ´aramszu¨net lesz, Giapetto gener´atorai csup´an 60 felu¨letkezel˝o ´or´ara elegend˝o ´aramot tudnak szolg´altatni. Hogyan v´altoztasson a term´ek¨osszet´etelen, hogy tov´abbra is optim´alisan mu˝k¨odj¨on a v´allalat? </div> 
@@ -164,9 +166,11 @@
             <div class="kerdes" style="margin-top: 40px">5. M´eg az ´aramszu¨net el˝ott egy kedves szomsz´ed k¨olcs¨on adott neki egy gener´atort, amivel m´ar 90 felu¨letkezel˝o ´or´ahoz elegend˝o ´aramot tud szolg´altatni, ebben az esetben meg tudjuk e mondani neki hogy hogyan mu˝k¨odtesse v´allalkoz´as´at? </div> 
             <li> Igen, mivel a 90 ´ora a hat´aron belu¨l esik, ´ıgy a proﬁtja : P(x') = 180−10∗1 = 170 $ lesz. </li>
             <li> A term´ek¨osszet´etel pedig az al´abbi m´odon kell be´all´ıtani: </li>
-            <div style="text-align: center">x<sub>1</sub> + x<sub>2</sub>(+ x<sub>3</sub> = 0) = 80</div>
-            <div style="text-align: center">2x<sub>1</sub> + x<sub>2</sub>(+ x<sub>4</sub> = 0) = 100 − 10 = 90</div>
-            <div style="text-align: center">x<sub>1</sub> + x<sub>5</sub> = 40</div>
+            <div class="centeredEquation">
+                <p>x<sub>1</sub> + x<sub>2</sub>(+ x<sub>3</sub> = 0) = 80</p>
+                <p>2x<sub>1</sub> + x<sub>2</sub>(+ x<sub>4</sub> = 0) = 100 − 10 = 90</p>
+                <p>x<sub>1</sub> + x<sub>5</sub> = 40</p>
+            </div>
             <li> x'<sub>1</sub> = 10 j´at´ek katon´at ´es x'<sub>2</sub> = 70 vonatot gy´artson!</li>
 
         </div>
@@ -213,7 +217,264 @@
 
         <div class="paperUp">
 
-        </div>
+            <!--feladat1-->
+            <div class="card">
+                <div class="card-header">
+                    1.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">Juli n´eni gofrit ´es palacsint´at ´arul a strandon. K´et alapanyag szu¨ks´eges ezek el˝o´all´ıt´as´ahoz: tej ´es liszt. Minden eladott gofri ut´an 50 forint ´es minden eladott palacsinta ut´an 40 forint proﬁtja lesz. Egy gofrihoz 10 dkg liszt, 13 cl tej szu¨ks´eges. Egy palacsint´ahoz 8 dkg liszt, 6.5 cl tej szu¨ks´eges. Viszont Juli n´eninek v´egesek a k´eszletei,´ıgy lisztb˝ol csak 8 kg, tejb˝ol 84.5 dl ´all rendelkez´esre.  </div>
+                    <div class="kerdes">Mennyi palacsint´at ´es mennyi gofrit csin´aljon, hogy maxim´alis legyen a proﬁtja? </div>
+                    <div class="leiras">Modell: </div>
+                    <div class="centeredEquation">
+                        <p> P(x) = 50x<sub>1</sub> + 40x<sub>2</sub> → MAX</p>
+                        <p> 1.) 10x<sub>1</sub> + 8x<sub>2</sub> &#8804; 800</p>
+                        <p> 2.) 13x<sub>1</sub> + 6.5x<sub>2</sub> &#8804; 845</p>
+                        <p> x<sub>1</sub>, x<sub>2</sub> &#8805; 0</p>
+                    </div>
+                    <div class="leiras">Optim´alis b´azishoz tartoz´o szimplex t´abla: </div>
+                    <table align="center">
+                        <tr style="border-bottom: 1px solid rgb(0, 0, 0);">
+                            <td>B</td>
+                            <td>P<sub>B</sub></td>
+                            <td style="border-right: 1px solid rgb(0, 0, 0);">X<sup>*</sup> </td>
+                            <td> 50</td>
+                            <td>40</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>A<sub>2</sub></td>
+                            <td>40</td>
+                            <td style="border-right: 1px solid rgb(0, 0, 0);">50 </td>
+                            <td> 0</td>
+                            <td>1</td>
+                            <td>1/3</td>
+                            <td>-10/39</td>
+                        </tr>
+                        <tr>
+                            <td>A<sub>1</sub></td>
+                            <td>50</td>
+                            <td style="border-right: 1px solid rgb(0, 0, 0);">40 </td>
+                            <td> 1</td>
+                            <td>0</td>
+                            <td>-1/6</td>
+                            <td>8/39</td>
+                        </tr>
+                        <tr style="border-top: 1px solid rgb(0, 0, 0);">
+                            <td></td>
+                            <td>P(x)=4000</td>
+                            <td></td>
+                            <td> 0</td>
+                            <td>0</td>
+                            <td>5</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
 
+                    <div class="kerdes" style="margin-top: 40px"> V´alaszolja meg az al´abbi k´erd´eseket a feladat u´jb´oli megold´asa n´elku¨l a dualit´as ¨osszefu¨gg´esek alkalmaz´as´aval: </div> 
+                    <li> Melyik nyersanyagb´ol marad ´es mennyi ha az optim´alis termel´esi tervet k¨ovetju¨k? </li>
+                    <li> Ha az aktu´alis liszt k´eszletemet egy egys´eggel b˝ov´ıtem, hogyan v´altozik a c´elfu¨ggv´eny ´ert´eke, azaz a maxim´alis proﬁt? </li>
+                    <li> A liszt felt´etel milyen hat´arai k¨oz¨ott marad a jelenlegi b´azis az optim´alis? Hat´arozzuk meg az optim´alis megold´ast abban az esetben, ha 6kg liszt ´all rendelkez´esre! </li>
+                    <li> Mennyivel v´altozhat a palacsinta ´ara, hogy az aktu´alis optim´alis megold´as optim´alis maradjon? </li>
+                    
+                </div>
+            </div>
+
+            <!--feladat2-->
+            <div class="card">
+                <div class="card-header">
+                    2.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras"> Egy kis ruh´azati v´allalat konfekci´o ¨olt¨ony¨oket ´es n˝oi kosztu¨m¨oket gy´art. Minden kosztu¨m¨on 4 $ haszna van, m´ıg minden ¨olt¨ony¨on 3 $. Minden ¨olt¨ony illetve kosztu¨m egy ´ora szab´ast ig´enyel. Egy kiszabott kosztu¨m¨ot 2, m´ıg egy kiszabott ¨olt¨onyt 1 ´ora alatt lehet megvarrni. Heti termel´esi terv elk´esz´ıt´es´ehez tudjuk, hogy egy h´eten maximum 40 ´ora ford´ıthat´o szab´asra ´es 60 varr´asra. Az anyagb´ol rendelkez´esre ´all´o mennyis´eg felt´etelez´esu¨nk szerint korl´atlan </div>
+                    <div class="kerdes"> Adjunk tan´acsot a c´egnek, hogy a maxim´alis proﬁthoz mennyi kosztu¨m¨ot ´es ¨olt¨onyt k´esz´ıtsen egy h´eten! </div>
+                    <div class="leiras">Modell: </div>
+                    <div class="centeredEquation">
+                        <p> P(x) = 4x<sub>1</sub> + 3x<sub>2</sub> → MAX</p>
+                        <p> 1.) x<sub>1</sub> + x<sub>2</sub> &#8804; 40</p>
+                        <p> 2.) 2x<sub>1</sub> + x<sub>2</sub> &#8804; 60</p>
+                        <p> x<sub>1</sub>, x<sub>2</sub> &#8805; 0</p>
+                    </div>
+                    <div class="leiras">Optim´alis b´azishoz tartoz´o szimplex t´abla: </div>
+                    <table align="center">
+                        <tr style="border-bottom: 1px solid rgb(0, 0, 0);">
+                            <td>B</td>
+                            <td>P<sub>B</sub></td>
+                            <td style="border-right: 1px solid rgb(0, 0, 0);">X<sup>*</sup> </td>
+                            <td> 4</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>A<sub>2</sub></td>
+                            <td>3</td>
+                            <td style="border-right: 1px solid rgb(0, 0, 0);">20 </td>
+                            <td> 0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>-1</td>
+                        </tr>
+                        <tr>
+                            <td>A<sub>1</sub></td>
+                            <td>4</td>
+                            <td style="border-right: 1px solid rgb(0, 0, 0);">20 </td>
+                            <td> 1</td>
+                            <td>0</td>
+                            <td>-1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr style="border-top: 1px solid rgb(0, 0, 0);">
+                            <td></td>
+                            <td>P(x)=140</td>
+                            <td></td>
+                            <td> 0</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+
+                    <div class="kerdes" style="margin-top: 40px"> V´alaszolja meg az al´abbi k´erd´eseket: </div> 
+                    <li> Melyik munkafolyamat egy ´or´anyi b˝ov´ıt´ese eredm´enyezne nagyobb proﬁt n¨oveked´est? </li>
+                    <li> Amennyiben az elad´asi ´arakat u´gy v´altoztatom, hogy egy k¨osztu¨m¨on ezut´an m´ar csak 3 $ (1$) hasznom van hogyan v´altozik az optim´alis megold´as/b´azis? </li>
+                    <li> Ha egy varr´on˝o szabads´agra megy, ´es ´ıgy a rendelkez´esre ´all´o varr´as ´or´ak sz´ama 8-cal cs¨okken, hogyan v´altozik az optim´alis b´azis ´es a maxim´alis haszon? Szu¨ks´eges e a probl´ema u´jb´oli megold´asa a k´erd´es megv´alaszol´as´ahoz? </li>
+                    <li> Ha k´et szab´on˝o elmegy szabads´agra, ´es´ıgy a rendelkez´esre ´all´o szab´as ´or´ak sz´ama 16-tal cs¨okken, hogyan v´altozik az optim´alis b´azis ´es a maxim´alis haszon? Szu¨ks´eges e a probl´ema u´jb´oli megold´asa a k´erd´es megv´alaszol´as´ahoz? </li>
+                    
+                </div>
+            </div>
+
+            <!--feladat3-->
+            <div class="card">
+                <div class="card-header">
+                    3.feladat
+                </div>
+                <div class="card-body">
+                    <div class="leiras">Modell: </div>
+                    <div class="centeredEquation">
+                        <p> P(x) = 5x<sub>1</sub> + 4x<sub>2</sub> → MAX</p>
+                        <p> 1.) 5x<sub>1</sub> + 2x<sub>2</sub> &#8804; 60</p>
+                        <p> 2.) 2x<sub>1</sub> + x<sub>2</sub> &#8804; 25</p>
+                        <p> x<sub>1</sub>, x<sub>2</sub> &#8805; 0</p>
+                    </div>
+                    <div class="leiras">Optim´alis b´azishoz tartoz´o szimplex t´abla: </div>
+                    <table align="center">
+                        <tr style="border-bottom: 1px solid rgb(0, 0, 0);">
+                            <td>B</td>
+                            <td>P<sub>B</sub></td>
+                            <td style="border-right: 1px solid rgb(0, 0, 0);">X<sup>*</sup> </td>
+                            <td> 5</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>A<sub>1</sub></td>
+                            <td>5</td>
+                            <td style="border-right: 1px solid rgb(0, 0, 0);">12 </td>
+                            <td> 1</td>
+                            <td>2/5</td>
+                            <td>1/5</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>A<sub>4</sub></td>
+                            <td>0</td>
+                            <td style="border-right: 1px solid rgb(0, 0, 0);">1 </td>
+                            <td> 0</td>
+                            <td>1/5</td>
+                            <td>-2/5</td>
+                            <td>1</td>
+                        </tr>
+                        <tr style="border-top: 1px solid rgb(0, 0, 0);">
+                            <td></td>
+                            <td>P(x)=60</td>
+                            <td></td>
+                            <td> 0</td>
+                            <td>0</td>
+                            <td>5Ó1</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+
+                    <div class="kerdes" style="margin-top: 40px"> V´alaszolja meg az al´abbi k´erd´eseket: </div> 
+                    <li> Marad e ki valamilyen nyersanyag az optim´alis term´ek ¨osszet´etel eset´en? </li>
+                    <li> Ha a kukorica k´eszletemet n¨ovelem 2 egys´eggel, hogyan v´altozik a c´elfu¨ggv´eny ´ert´eke, illetve az optim´alis b´azis ´es megold´as? </li>
+                    <li> A koml´o k´eszlet milyen hat´arai k¨oz¨ott tudjuk meghat´arozni az optim´alis megold´ast a feladat u´jb´oli megold´asa n´elku¨l. Mennyi lesz a v´egpontokon a c´elfu¨ggv´eny ´ert´eke? </li>
+                    
+                </div>
+            </div>
+
+            <!--feladat4-->
+            <div class="card">
+                <div class="card-header">
+                    4.feladat (elérhető megoldással - lásd lentebb)
+                </div>
+                <div class="card-body">
+                    <div class="leiras"> Egy bu´toripari kisv´allalkoz´as k´etf´ele bu´tort gy´art: kom´odot´es t´alal´oszekr´enyt. Egy t´alal´oszekr´eny el˝o´all´ıt´as´ahoz 2 egys´egnyi faanyagra, 2 egys´eg u¨vegre ´es 3 ´ora szakmunk´ara van szu¨ks´eg, m´ıg egy kom´od el˝o´all´ıt´as´ahoz 4 egys´eg faanyagra ´es 2 ´ora szakmunk´ara. A rendelkez´esre ´all´o kapacit´asok: 160 egys´eg faanyag, 120 ´ora szakmunka ´es 60 egys´eg u¨veg. </div>
+                    <div class="kerdes">  Hogyan tudna maximaliz´alni a v´allalkoz´as a bev´etel´et, ha egy t´alal´oszekr´enyt 60 Eur´o´ert, egy kom´odot 80 Eur´o´ert tudnak ´ert´ekes´ıteni? </div>
+                    <div class="leiras">Modell: </div>
+                    <div class="centeredEquation">
+                        <p> P(x) = 80x<sub>1</sub> + 60x<sub>2</sub> → MAX</p>
+                        <p> 1.) 4x<sub>1</sub> + 2x<sub>2</sub> &#8804; 160</p>
+                        <p> 2.) 2x<sub>1</sub> &#8804; 60</p>
+                        <p> 3.) 2x<sub>1</sub> + 3x<sub>2</sub> &#8804; 120</p>
+                        <p> x<sub>1</sub>, x<sub>2</sub> &#8805; 0</p>
+                    </div>
+                    <div class="leiras">Optim´alis b´azishoz tartoz´o szimplex t´abla: </div>
+                    <table align="center">
+                        <tr style="border-bottom: 1px solid rgb(0, 0, 0);">
+                            <td>B</td>
+                            <td>P<sub>B</sub></td>
+                            <td style="border-right: 1px solid rgb(0, 0, 0);">X<sup>*</sup> </td>
+                            <td> 80</td>
+                            <td>60</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>A<sub>1</sub></td>
+                            <td>80</td>
+                            <td style="border-right: 1px solid rgb(0, 0, 0);">30 </td>
+                            <td> 1</td>
+                            <td>0</td>
+                            <td>3/8</td>
+                            <td>0</td>
+                            <td>-1/4</td>
+                        </tr>
+                        <tr>
+                            <td>A<sub>4</sub></td>
+                            <td>0</td>
+                            <td style="border-right: 1px solid rgb(0, 0, 0);">20 </td>
+                            <td> 0</td>
+                            <td>0</td>
+                            <td>1/2</td>
+                            <td>1</td>
+                            <td>-1</td>
+                        </tr>
+                        <tr style="border-top: 1px solid rgb(0, 0, 0);">
+                            <td></td>
+                            <td>P(x)=3600</td>
+                            <td></td>
+                            <td> 0</td>
+                            <td>0</td>
+                            <td>15</td>
+                            <td>0</td>
+                            <td>10</td>
+                        </tr>
+                    </table>
+
+                    <div class="kerdes" style="margin-top: 40px"> V´alaszolja meg az al´abbi k´erd´eseket a feladat u´jb´oli megold´asa n´elku¨l a dualit´as ¨osszefu¨gg´esek alkalmaz´as´aval: <button class="btn btn-outline-danger" title="Megoldás letöltése (pdf)" (click)="downloadSolutionForTask4()"><i class="material-icons">save_alt</i></button> </div> 
+                    <li> Melyik nyersanyagb´ol marad ´es mennyi ha az optim´alis termel´esi tervet k¨ovetju¨k? </li>
+                    <li> Ha az aktu´alis k´eszletemet egy egys´eg f´aval (szakmunk´aval) b˝ov´ıtem, hogyan v´altozik a c´elfu¨ggv´eny ´ert´eke, azaz a maxim´alis proﬁt? </li>
+                    <li> A szakmunka milyen hat´arai k¨oz¨ott marad a jelenlegi b´azis az optim´alis? A v´egpontokon hat´arozzuk meg az optim´alis megold´asokat is! </li>
+                    <li> Mennyivel v´altozhat a t´alal´oszekr´eny ´ara, hogy az aktu´alis optim´alis megold´as optim´alis maradjon? </li>
+                    
+                </div>
+            </div>
+
+        </div>       
     </div>
 </div>
