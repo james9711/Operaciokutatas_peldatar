@@ -11,24 +11,24 @@
 }
 
 .split {
-  height: 100vh;
+  height: 100%;
   position: fixed;
   overflow-x: hidden;
 }
 
 .left {
-  padding: 10px;
+  padding-left: 1vw;
   left: 0;
-  width: 14%;
+  width: 15%;
   background-color: rgb(136, 129, 118);
   color: black;
   box-shadow: 10px 6px 6px -6px black;
 }
 
 .right {
-  padding: 4%;
+  padding: 4vw;
   right: 0;
-  width: 86%;
+  width: 85%;
   background-color: rgba(184, 172, 158, 0.822);
 }
 
@@ -36,9 +36,12 @@
   margin-top: 80px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .right {
-    width: 100%; /* The rights width is 100%, when the viewport is 500px or smaller */
+    width: 100%;
+  }
+  .left {
+    width: 0%;
   }
 }
 
@@ -46,15 +49,15 @@
   font-family: 'Inconsolata', monospace;
 }
 
-.menu button{
+.menu button {
   font-weight: 500;
-  height: 60px;
+  height: 6vh;
   opacity: 0.8;
   width: 100%;
   border: none;
   text-align: left;
   border-radius: 0;
-  font-size: 20px;
+  font-size: 2vh;
   color: rgb(24, 24, 24);
   cursor: pointer;
 }
@@ -66,11 +69,11 @@
   box-shadow: 0 8px 6px -6px black;
 }
 
-.menu h5{
+.menu h5 {
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 20px;
-  font-size: 30px;
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+  font-size: 3vh;
   font-weight: bold;
   cursor: pointer;
 }
@@ -86,7 +89,7 @@
   left: 20px;
   bottom: 20px;
   color: rgba(211, 208, 208, 0.884);
-  font-size: 14px;
+  font-size: 1.6vh;
 }
 
 .fejezetcim {

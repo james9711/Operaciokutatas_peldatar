@@ -36,7 +36,10 @@
             <mat-horizontal-stepper>
                 <mat-step [stepControl]="firstFormGroup">
                     <form [formGroup]="firstFormGroup">
-                    <ng-template matStepLabel>Fill out your name</ng-template>
+                    <ng-template matStepLabel>LÉPÉS 1</ng-template>
+                    <img src="../../assets/sources/pictures/ch4 tablak/step1.PNG" class="diagram">
+                    A Theta értékének meghatározása:
+                    &#920; = 6
                     <div>
                         <button mat-button matStepperNext>Next</button>
                     </div>
@@ -44,7 +47,10 @@
                 </mat-step>
                 <mat-step [stepControl]="secondFormGroup">
                     <form [formGroup]="secondFormGroup">
-                    <ng-template matStepLabel>Fill out your address</ng-template>
+                    <ng-template matStepLabel>LÉPÉS 2</ng-template>
+                    <img src="../../assets/sources/pictures/ch4 tablak/step2.PNG" class="diagram">
+                    A Theta értékének meghatározása:
+                    &#920; = 8
                     <div>
                         <button mat-button matStepperPrevious>Back</button>
                         <button mat-button matStepperNext>Next</button>
@@ -52,8 +58,10 @@
                     </form>
                 </mat-step>
                 <mat-step>
-                    <ng-template matStepLabel>Done</ng-template>
-                    You are now done.
+                    <ng-template matStepLabel>LÉPÉS 3 (összköltség meghatározása)</ng-template>
+                    <img src="../../assets/sources/pictures/ch4 tablak/step3.PNG" class="diagram">
+                    A folyamat végére értünk, az összköltség meghatározása:
+                    Öktg = 133
                     <div>
                     <button mat-button matStepperPrevious>Back</button>
                     <button mat-button (click)="stepper.reset()">Reset</button>
@@ -1178,5 +1186,3 @@
 
     </div>
 </div>
-
-
