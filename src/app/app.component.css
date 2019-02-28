@@ -71,6 +71,7 @@
   transform: scale(1.1);
   transition: transform .2s;
   box-shadow: 0 8px 6px -6px black;
+  filter: brightness(120%);
 }
 
 .menu h5 {
@@ -228,9 +229,7 @@ h5 {
 .centeredEquation {
   margin: auto;
   width: 25%;
-  border: 1px solid rgba(0, 0, 0, 0.027);
-}
-
-.centeredEquation p {
-  left: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 11px #00000034;
+  padding: 10px;
 }

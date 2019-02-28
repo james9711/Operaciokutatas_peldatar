@@ -2,17 +2,25 @@ mat-divider {
   padding-top: 40px;
 }
 
-mat-list h4:hover, mat-list-item:hover {
-  font-weight: bold;
-  transform: scale(1.03);
-  transition: all .5s ease-in-out;
+mat-list h4:hover {
+  animation: titleAnimation 2s 1;
   cursor: pointer;
+}
+
+mat-list-item:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.637);
 }
 
 #tartalomjegyzek {
   margin-bottom: 30px;
   animation-duration: 1s;
   animation-name: slidein;
+}
+
+@keyframes titleAnimation {
+  30%{
+      letter-spacing: 5px;
+  }
 }
 
 @keyframes slidein {

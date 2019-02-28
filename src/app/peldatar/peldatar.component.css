@@ -7,11 +7,4 @@
     margin-top: 20px;
     margin-bottom: 50px;
     text-align: center;
-    animation: titleAnimation 2s 1;
-}
-
-@keyframes titleAnimation {
-    30%{
-        letter-spacing: 5px;
-    }
 }
