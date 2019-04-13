@@ -33,6 +33,96 @@
 
             <h5>2.1. Elméleti levezetés, kidolgozás</h5>
 
+            <mat-horizontal-stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>LÉPÉS 1</ng-template>
+                        
+                        <div class="leiras">Az alábbi táblázat szerint adottak az F1...F5 munakvégzők és a G1...G5 feladatok. </div>
+                        <div class="leiras">A táblázat minden egyes értéke (C<sub>ij</sub>) az F<sub>j</sub> munkás G<sub>i</sub> munka elvégzésének értékét jelöli. </div>
+                        <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch5 tablak/alapertekek.png" class="diagram">
+                        <div class="kerdes">Adja meg azt a legkedvezőbb munkabeosztást, ahol a legkisebb költség mellett igaz, hogy minden munka elvégzésre kerül és mindenki egy munkát végez.</div>
+
+                    <div style="margin-top: 40px">
+                        <button mat-button matStepperNext>Következő</button>
+                    </div>
+                    </form>
+                </mat-step>
+
+                <mat-step [stepControl]="secondFormGroup">
+                    <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>LÉPÉS 2</ng-template>
+
+                    <div class="leiras">Nullára redukálás sorokra: </div>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch5 tablak/step1_sorra.PNG" class="diagram">
+                    <div class="leiras">Nullára redukálás oszlopokra: </div>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch5 tablak/step1_oszlop.PNG" class="diagram">
+                    <div class="leiras">Maximum elemszámú független nullrendszer keresése: </div>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch5 tablak/step1_nullRendszer.PNG" class="diagram">
+                    <div class="leiras">A nullák számával egyező számú fedőrendszert keresek: </div>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch5 tablak/step1_fedorendszer.PNG" class="diagram">
+                    <div class="leiras">A fedőrendszer alapján a fedés mértékétől függően a táblázat értékeinek csökkentése: </div>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch5 tablak/step1_csokkentett.PNG" class="diagram">
+
+                    <div style="margin-top: 40px">
+                        <button mat-button matStepperPrevious>Előző</button>
+                        <button mat-button matStepperNext>Következő</button>
+                    </div>
+                    </form>
+                </mat-step>
+
+                <mat-step>
+                    <ng-template matStepLabel>LÉPÉS 3</ng-template>
+
+                    <div class="leiras">Maximum elemszámú független nullrendszer keresése: </div>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch5 tablak/step2_nullrendszer.PNG" class="diagram">
+                    <div class="leiras">A nullák számával egyező számú fedőrendszert keresek: </div>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch5 tablak/step2_fedorendszer.PNG" class="diagram">
+                    <div class="leiras">A táblázat alapján minden sorra és oszlopra igaz, hogy szerepel bennük a független nullrendszer egy-egy eleme <div class="kerdes"> -> megtaláltuk az optimális megoldást! </div></div>
+                    <div class="leiras">Az összköltséget már csak ki kell olavsni a táblázatunkből és összeadni az egyes munkavégzések táblázatban megadott értékeit:</div>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch5 tablak/vegeredmeny.PNG" class="diagram">
+                    <div class="leiras">A fenti táblázatból láhatóak az alábbi munkaviszonyok: </div>
+                    <table align="center" style="border-right: none; border-left: none; border-top: none; border-bottom: none;">
+                        <tr>
+                            <th style="border-right: none; border-top: none;">Munka</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Munkás</th>
+                            <th style="border-right: none; border-left: none; border-top: none;">Költség</th>
+                        </tr>
+                        <tr>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">G<sub>1</sub></td>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">F<sub>4</sub></td>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">2</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">G<sub>2</sub></td>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">F<sub>3</sub></td>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">5</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">G<sub>3</sub></td>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">F<sub>1</sub></td>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">2</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">G<sub>4</sub></td>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">F<sub>2</sub></td>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">2</td>
+                        </tr>
+                        <tr>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">G<sub>5</sub></td>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">F<sub>5</sub></td>
+                            <td style="border-right: none; border-left: none; border-bottom:none;">3</td>
+                        </tr>
+                    </table>
+
+                    <div class="kerdes">A keresett összköltség: 14</div>
+
+                    <div style="margin-top: 40px">
+                        <button mat-button matStepperPrevious>Előző</button>
+                    </div>
+                </mat-step>
+            </mat-horizontal-stepper>
+
         </div>
 
     </div>

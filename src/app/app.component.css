@@ -54,13 +54,13 @@
 
 .menu button {
   font-weight: 500;
-  height: 6vh;
+  height: 60px;
   opacity: 0.8;
   width: 100%;
   border: none;
   text-align: left;
   border-radius: 0;
-  font-size: 2vh;
+  font-size: 22px;
   color: rgb(24, 24, 24);
   cursor: pointer;
 }
@@ -78,7 +78,7 @@
   text-align: center;
   padding-top: 3vh;
   padding-bottom: 1vh;
-  font-size: 3vh;
+  font-size: 40px;
   font-weight: bold;
   cursor: pointer;
 }

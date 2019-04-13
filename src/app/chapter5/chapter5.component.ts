@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-chapter5',
@@ -8,9 +9,14 @@ import { AppComponent } from '../app.component';
 })
 export class Chapter5Component implements OnInit {
 
-  constructor(private appComp: AppComponent) { }
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+
+  constructor(private appComp: AppComponent, private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.firstFormGroup = this._formBuilder.group({firstCtrl: ['', Validators.required]});
+    this.secondFormGroup = this._formBuilder.group({secondCtrl: ['', Validators.required]});
   }
 
   downloadFailedSnackBar(): void {
