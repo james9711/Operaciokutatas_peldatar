@@ -38,7 +38,14 @@
                     <form [formGroup]="firstFormGroup">
                     <ng-template matStepLabel>LÉPÉS 1</ng-template>
 
-                    <div class="leiras">A Theta értékének meghatározása: &#920; = 6 </div>
+                    <div class="leiras">Legyen adott a következő feladat, az alábbi táblázatban megadott értékekkel.</div>
+                    <div class="leiras">Ahol, </div>
+                    <li>minden oszlop: B1...B4 egy felvevőt jelöl, az oszlop alján az adott bolt igényével</li>
+                    <li>minden sor: R1...R3 egy feladót jelöl, a sor végén a raktár kapacitásával</li>
+                    <li>C<sub>ij</sub> pedig az egységnyi árú elszállításának költségét jelöli R<sub>i</sub>raktár és B<sub>j</sub> bolt között</li>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch4 tablak/alapertekek.PNG" class="diagram">
+                    
+                    <div class="kerdes">A táblázat alapján honnan hova mennyi árú szállítása szükséges az optimális terv/ modell eléréséhez?</div>
 
                     <div style="margin-top: 40px">
                         <button mat-button matStepperNext>Következő</button>
@@ -49,7 +56,21 @@
                     <form [formGroup]="secondFormGroup">
                     <ng-template matStepLabel>LÉPÉS 2</ng-template>
 
-                    <div class="leiras">A Theta értékének meghatározása: &#920; = 6 </div>
+                    <div class="leiras">A feladat <b>kiegyensúlyozott</b>, hiszen a raktárak összkapacitása megegyezik a boltok igényeinek összegével! <b>(120=120)</b></div>
+                    
+                    <div class="leiras">Indulóbázis keresése:</div>
+                    <div class="leiras">A táblázatot ki kell tölteni, úgy hogy a sorokban a szállított mennyiség megegyezzen a raktár kapacitásával, illetve  az oszlopokban a bolt igényével. Erre 3 eljárás van, a lent ábrán az <b>Észak-Nyugati sarok módszer</b> eredménye látható.</div>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch4 tablak/step1.PNG" class="diagram">
+
+                    <img style="margin-top: 40px; margin-bottom: 40px; width:150px" src="../../assets/sources/pictures/ch4 tablak/egyenletrendszer.PNG" class="diagram">
+                    <div class="leiras">6 egyenlet és 7 ismeretlen -> u<sub>1</sub> értéke legyen 0</div>
+                    <div class=leiras style="margin-top: 40px">Ezek után a következő értékeket kapjuk: </div>
+                    <li>u<sub>2</sub>=2</li>
+                    <li>u<sub>3</sub>=4</li>
+                    <li>v<sub>1</sub>=8</li>
+                    <li>v<sub>2</sub>=2</li>
+                    <li>v<sub>3</sub>=1</li>
+                    <li>v<sub>4</sub>=5</li>
 
                     <div style="margin-top: 40px">
                         <button mat-button matStepperPrevious>Előző</button>
@@ -58,9 +79,21 @@
                     </form>
                 </mat-step>
                 <mat-step>
-                    <ng-template matStepLabel>LÉPÉS 3 (összköltség meghatározása)</ng-template>
+                    <ng-template matStepLabel>LÉPÉS 3</ng-template>
 
-                    <div class="leiras">A folyamat végére értünk, az összköltség meghatározása: </div>
+                    <div class="leiras">A második lépés végén meghatározott u<sub>1,2,3</sub> és v<sub>1,2,3,4</sub> értékek segítségével az optimalitás ellenőrzése következik. Ehhez a redukált költségek meghatározása szükségesa bal felső sarokba.</div>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch4 tablak/step2.PNG" class="diagram">
+                    
+                    <div class="leiras">Amíg létezik negatív redukált költség a táblában a folyamat folytatódik.</div>
+                    <div class="leiras">Következő lépés a hurok keresése.</div>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch4 tablak/step2_levonasMenete.PNG" class="diagram">
+                    
+                    <div class="leiras">A Theta értékének meghatározása: &#920; = 6 </div>
+                    <img style="margin-top: 40px; margin-bottom: 40px" src="../../assets/sources/pictures/ch4 tablak/step3.PNG" class="diagram">
+                    <div class="leiras">Innen újra indul az iteráció: </div>
+                        <li>Felírjuk a báziscellákat, megoldjuk az  egyenletrendszert</li>
+                        <li>Kiszámoljuk a d<sub>ij</sub> értékeket, <span style="font-style: italic">ha nincs negatív: optimális megoldás</span></li>
+                        <li><span style="font-style: italic">, ha van: &#920; (Theta) bevezetése, hurok-keresés, új megoldásba áttérés</span></li>
 
                     <div style="margin-top: 40px">
                         <button mat-button matStepperPrevious>Előző</button>
