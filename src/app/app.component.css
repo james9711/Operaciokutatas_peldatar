@@ -52,19 +52,21 @@
 }
 
 .menu button {
-  height: 6.5vh;
+  height: 6vh;
   opacity: 0.8;
   width: 100%;
   border: none;
   text-align: left;
   border-radius: 0;
-  font-size: 2.2vh;
+  font-size: 1vw;
   font-weight: 500;
   color: rgb(24, 24, 24);
   cursor: pointer;
 }
 
 .menu button:hover {
+  border-radius: 5px;
+  height: 6.2vh;
   opacity: 1;
   color: rgb(221, 218, 218);
   transform: scale(1.1);
@@ -75,9 +77,9 @@
 
 .menu h5 {
   text-align: center;
-  padding-top: 3vh;
+  padding-top: 2vh;
   padding-bottom: 1vh;
-  font-size: 4vh;
+  font-size: 1.8vw;
   font-weight: bold;
   cursor: pointer;
 }
@@ -93,7 +95,7 @@
   left: 20px;
   bottom: 20px;
   color: rgba(211, 208, 208, 0.884);
-  font-size: 1.5vh;
+  font-size: 12px;
 }
 
 .fejezetcim {
